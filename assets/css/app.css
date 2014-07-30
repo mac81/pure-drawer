@@ -1,4 +1,16 @@
 /* [sass, assets/scss, app.scss] */
+/************
+## Toggler ##
+************/
+/***********
+## Drawer ##
+***********/
+/***********
+## Pusher ##
+***********/
+/*******************
+## Pusher Overlay ##
+*******************/
 /**************
 ## Container ##
 **************/
@@ -42,10 +54,11 @@
   -webkit-transform: translate3d(-50%, 0, 0);
   transform: translate3d(-50%, 0, 0); }
 
-.nav-drawer-toggle:checked ~ .nav-drawer-toggle-label {
+.nav-drawer-toggle:checked ~ .nav-drawer-toggle-label, .nav-drawer-toggle:checked ~ * .nav-drawer-toggle-label {
   -webkit-transform: translate3d(220px, 0, 0) rotate(-45deg);
   transform: translate3d(220px, 0, 0) rotate(-45deg);
-  border-color: #fff; }
+  border-color: #fff;
+  color: #fff; }
 
 [data-position='right'] .nav-drawer-toggle:checked ~ .nav-drawer-toggle-label {
   -webkit-transform: rotate(-45deg);
@@ -65,7 +78,7 @@
   z-index: 1;
   width: 300px;
   height: 100%;
-  background-color: #48a770;
+  background-color: #d95843;
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
 
@@ -108,7 +121,7 @@
   right: 0;
   width: 0;
   height: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 0;
   -webkit-transition: opacity 0.5s 0.3s;
   transition: opacity 0.5s 0.3s; }
@@ -358,48 +371,6 @@
   transform: translate3d(0, 0, -100px) rotateX(20deg); }
 
 /**************************
-## Effect 8 - Open Door ##
-**************************/
-/* DRAWER */
-[data-effect='drawer-effect-8'] .nav-drawer {
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0); }
-
-[data-position='right'][data-effect='drawer-effect-8'] .nav-drawer {
-  -webkit-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0); }
-
-[data-position='top'][data-effect='drawer-effect-8'] .nav-drawer {
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0); }
-
-[data-effect='drawer-effect-8'] .nav-drawer-toggle:checked ~ .nav-drawer {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-/* PUSHER CONTAINER */
-[data-effect='drawer-effect-8'] .nav-drawer-pusher-container {
-  -webkit-perspective: 1500px;
-  perspective: 1500px; }
-
-/* PUSHER */
-/* Needed for Firefox */
-[data-effect='drawer-effect-8'] .nav-drawer-pusher-container .nav-drawer-pusher {
-  z-index: 1; }
-
-[data-effect='drawer-effect-8'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: rotateY(-10deg);
-  transform: rotateY(-10deg); }
-
-[data-position='right'][data-effect='drawer-effect-8'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: rotateY(10deg);
-  transform: rotateY(10deg); }
-
-[data-position='top'][data-effect='drawer-effect-8'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: rotateX(10deg);
-  transform: rotateX(10deg); }
-
-/**************************
 ## Effect 9 - Fall Down ##
 **************************/
 /* DRAWER */
@@ -464,175 +435,5 @@
 [data-position='top'][data-effect='drawer-effect-10'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
   -webkit-transform: translate3d(0, 90px, 0);
   transform: translate3d(0, 90px, 0); }
-
-/*****************************
-## Effect 11 - Rotate pusher ##
-*****************************/
-/* BROKEN OVERLAY */
-[data-effect='drawer-effect-11'] {
-  -webkit-perspective: 1500px;
-  perspective: 1500px; }
-
-[data-effect='drawer-effect-11'] .nav-drawer {
-  -webkit-transform: translate3d(-100%, 0, 0);
-  transform: translate3d(-100%, 0, 0);
-  -webkit-transform-origin: 100% 0;
-  transform-origin: 100% 0;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-position='right'][data-effect='drawer-effect-11'] .nav-drawer {
-  -webkit-transform: translate3d(100%, 0, 0);
-  transform: translate3d(100%, 0, 0);
-  -webkit-transform-origin: 100% 0;
-  transform-origin: 100% 0;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-effect='drawer-effect-11'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher .nav-drawer {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(15deg);
-  transform: translate3d(-100%, 0, 0) rotateY(15deg); }
-
-[data-position='right'][data-effect='drawer-effect-11'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher .nav-drawer {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(0, 0, 0) rotateY(-15deg);
-  transform: translate3d(0, 0, 0) rotateY(-15deg); }
-
-[data-effect='drawer-effect-11'] .nav-drawer-pusher {
-  -webkit-transform-origin: 0% 50%;
-  transform-origin: 0% 50%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-effect='drawer-effect-11'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: translate3d(300px, 0, 0) rotateY(-15deg);
-  transform: translate3d(300px, 0, 0) rotateY(-15deg); }
-
-[data-position='right'][data-effect='drawer-effect-11'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0) rotateY(15deg);
-  transform: translate3d(-300px, 0, 0) rotateY(15deg); }
-
-/*****************************
-## Effect 12 - 3D Rotate inn ##
-*****************************/
-[data-effect='drawer-effect-12'] {
-  -webkit-perspective: 1500px;
-  perspective: 1500px;
-  -webkit-perspective-origin: 0% 50%;
-  perspective-origin: 0% 50%; }
-
-[data-position='top'][data-effect='drawer-effect-12'] {
-  -webkit-perspective-origin: 50% 0%;
-  perspective-origin: 50% 0%; }
-
-[data-effect='drawer-effect-12'] .nav-drawer {
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
-  transform: translate3d(-100%, 0, 0) rotateY(-90deg);
-  -webkit-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-position='right'][data-effect='drawer-effect-12'] .nav-drawer {
-  -webkit-transform: translate3d(100%, 0, 0) rotateY(35deg);
-  transform: translate3d(100%, 0, 0) rotateY(35deg);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-position='top'][data-effect='drawer-effect-12'] .nav-drawer {
-  -webkit-transform: translate3d(0, -50%, 0) rotateX(45deg);
-  transform: translate3d(0, -50%, 0) rotateX(45deg);
-  -webkit-transform-origin: 0 100%;
-  transform-origin: 0 100%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-effect='drawer-effect-12'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher .nav-drawer {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-  transform: translate3d(-100%, 0, 0) rotateY(0deg); }
-
-[data-position='right'][data-effect='drawer-effect-12'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher .nav-drawer {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(100%, 0, 0) rotateY(0deg);
-  transform: translate3d(100%, 0, 0) rotateY(0deg); }
-
-[data-position='top'][data-effect='drawer-effect-12'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher .nav-drawer {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(0, -100%, 0) rotateY(0deg);
-  transform: translate3d(0, -100%, 0) rotateY(0deg); }
-
-[data-effect='drawer-effect-12'] .nav-drawer-pusher {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-effect='drawer-effect-12'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-[data-position='right'][data-effect='drawer-effect-12'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0);
-  transform: translate3d(-300px, 0, 0); }
-
-[data-position='top'][data-effect='drawer-effect-12'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: translate3d(0, 90px, 0);
-  transform: translate3d(0, 90px, 0); }
-
-/*****************************
-## Effect 13 - 3D Rotate out ##
-*****************************/
-[data-effect='drawer-effect-13'] {
-  -webkit-perspective: 1500px;
-  perspective: 1500px;
-  -webkit-perspective-origin: 0% 50%;
-  perspective-origin: 0% 50%; }
-
-[data-effect='drawer-effect-13'] .nav-drawer {
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg);
-  transform: translate3d(-100%, 0, 0) rotateY(90deg);
-  -webkit-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-position='right'][data-effect='drawer-effect-13'] .nav-drawer {
-  -webkit-transform: translate3d(100%, 0, 0) rotateY(-140deg);
-  transform: translate3d(100%, 0, 0) rotateY(-140deg);
-  -webkit-transform-origin: 0 0;
-  transform-origin: 0 0;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-effect='drawer-effect-13'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher .nav-drawer {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(0deg);
-  transform: translate3d(-100%, 0, 0) rotateY(0deg); }
-
-[data-position='right'][data-effect='drawer-effect-13'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher .nav-drawer {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  -webkit-transform: translate3d(100%, 0, 0) rotateY(0deg);
-  transform: translate3d(100%, 0, 0) rotateY(0deg); }
-
-[data-effect='drawer-effect-13'] .nav-drawer-pusher {
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d; }
-
-[data-effect='drawer-effect-13'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: translate3d(300px, 0, 0);
-  transform: translate3d(300px, 0, 0); }
-
-[data-position='right'][data-effect='drawer-effect-13'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
-  -webkit-transform: translate3d(-300px, 0, 0);
-  transform: translate3d(-300px, 0, 0); }
 
 /*# sourceMappingURL=app.css.map */
