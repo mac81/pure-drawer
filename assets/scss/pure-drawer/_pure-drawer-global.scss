@@ -39,6 +39,10 @@
     transition: all 400ms ease-in-out;  
     border: 2px solid $toggler-color;
     border-radius: 50%;
+    &:hover {
+    	border-color: darken($toggler-color, 20%);
+    	color: darken($toggler-color, 20%);
+    }
 }
 
 [data-position='right'] .pure-toggle-label {
