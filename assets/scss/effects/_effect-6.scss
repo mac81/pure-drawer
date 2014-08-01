@@ -1,0 +1,75 @@
+/*************************
+## Effect 6 - Scale Up ##
+*************************/
+
+/* CONTAINER */
+
+[data-effect='drawer-effect-6'] {
+	-webkit-perspective: 1500px;
+	perspective: 1500px;
+	-webkit-perspective-origin: 0% 50%;
+	perspective-origin: 0% 50%;
+}
+
+[data-position='right'][data-effect='drawer-effect-6'] {
+	-webkit-perspective-origin: 50% 50%;
+	perspective-origin: 50% 50%;
+}
+
+[data-position='top'][data-effect='drawer-effect-6'] {
+	-webkit-perspective-origin: 50% 0;
+	perspective-origin: 50% 0;
+}
+
+/* DRAWER */
+
+[data-effect='drawer-effect-6'] .nav-drawer {
+	-webkit-transform: translate3d(0, 0, -$drawer-width);
+	transform: translate3d(0, 0, -$drawer-width);
+}
+
+[data-position='right'][data-effect='drawer-effect-6'] .nav-drawer {
+	-webkit-transform: translate3d($drawer-width, 0, -$drawer-width);
+	transform: translate3d($drawer-width, 0, -$drawer-width);
+}
+
+[data-position='top'][data-effect='drawer-effect-6'] .nav-drawer {
+	-webkit-transform: translate3d(0, 0, -$drawer-height);
+	transform: translate3d(0, 0, -$drawer-height);
+}
+
+[data-effect='drawer-effect-6'] .nav-drawer-toggle:checked ~ .nav-drawer {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+/* PUSHER */
+
+[data-effect='drawer-effect-6'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
+	-webkit-transform: translate3d($drawer-width, 0, 0);
+	transform: translate3d($drawer-width, 0, 0);
+}
+
+[data-position='right'][data-effect='drawer-effect-6'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
+	-webkit-transform: translate3d(-$drawer-width, 0, 0);
+	transform: translate3d(-$drawer-width, 0, 0);
+}
+
+[data-position='top'][data-effect='drawer-effect-6'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
+	-webkit-transform: translate3d(0, $drawer-height, 0);
+	transform: translate3d(0, $drawer-height, 0);
+}
+
+/* Fallback for older browsers */
+
+.no-csstransforms3d {
+	[data-effect='drawer-effect-6'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
+		left: $drawer-width;
+	}
+	[data-position='right'][data-effect='drawer-effect-6'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
+		left: -$drawer-width;
+	}
+	[data-position='top'][data-effect='drawer-effect-6'] .nav-drawer-toggle:checked ~ .nav-drawer-pusher-container .nav-drawer-pusher {
+		top: $drawer-height;
+	}
+}
