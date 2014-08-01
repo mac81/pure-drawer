@@ -1,4 +1,4 @@
-Version: 0.1
+Version: 0.3
 
 Demo: http://mac81.github.io/css-drawer/
 
@@ -8,5 +8,4 @@ Planned features:
 
  - Multiple drawers
  - Javascript enhanced version
- - Fallback for older browsers
  
