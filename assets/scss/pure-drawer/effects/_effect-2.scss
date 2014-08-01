@@ -1,0 +1,34 @@
+/**********************
+## Effect 2 - Reveal ##
+**********************/
+
+/* PUSHER */
+
+[data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+	-webkit-transform: translate3d($drawer-width, 0, 0);
+	transform: translate3d($drawer-width, 0, 0);
+}
+
+[data-position='right'][data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+	-webkit-transform: translate3d(-$drawer-width, 0, 0);
+	transform: translate3d(-$drawer-width, 0, 0);
+}
+
+[data-position='top'][data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+	-webkit-transform: translate3d(0, $drawer-height, 0);
+	transform: translate3d(0, $drawer-height, 0);
+}
+
+/* Fallback for older browsers */
+
+.no-csstransforms3d {
+	[data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+		left: $drawer-width;
+	}
+	[data-position='right'][data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+		left: -$drawer-width;
+	}
+	[data-position='top'][data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+		top: $drawer-height;
+	}
+}
