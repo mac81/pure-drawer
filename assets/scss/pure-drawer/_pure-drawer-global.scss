@@ -39,9 +39,18 @@
     transition: all 400ms ease-in-out;  
     border: 2px solid $toggler-color;
     border-radius: 50%;
+    -webkit-user-select: none; 
+	-moz-user-select: none;     
+	-ms-user-select: none;     
+	-o-user-select: none;
+	user-select: none; 
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes grey background on link taps in ios
     &:hover {
     	border-color: darken($toggler-color, 20%);
     	color: darken($toggler-color, 20%);
+    }
+    &:active {
+    	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 }
 
@@ -57,8 +66,8 @@
 }
 
 .pure-toggle:checked ~ .pure-toggle-label {
-	-webkit-transform: translate3d(220px, 0, 0) rotate(-45deg);
-	transform: translate3d(220px, 0, 0) rotate(-45deg);
+	-webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+	transform: translate3d(0, 0, 0) rotate(-45deg);
 	border-color: $toggler-checked-color;
 	color: $toggler-checked-color;
 }
@@ -82,11 +91,13 @@
 	top: 0;
 	left: 0;
 	z-index: 1;
-	width: $drawer-width;
 	height: 100%;
 	background-color: $drawer-bgcolor;
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
+	width: $drawer-width-small;
+	@media #{$medium-up} { width: $drawer-width-medium; }
+	@media #{$large-up} { width: $drawer-width-large; }
 }
 
 [data-position='right'] .pure-drawer {
@@ -95,8 +106,10 @@
 }
 
 [data-position='top'] .pure-drawer {
-	height: $drawer-height;
+	height: $drawer-height-small;
 	width: 100%;
+	@media #{$medium-up} { height: $drawer-height-medium; }
+	@media #{$large-up} { height: $drawer-height-large; }
 }
 
 /*********************
@@ -142,15 +155,21 @@
 }
 
 [data-position='left'] .pure-toggle:checked ~ .pure-pusher-container .pure-overlay {
-	left: $drawer-width;
+	left: $drawer-width-small;
+	@media #{$medium-up} { left: $drawer-width-medium; }
+	@media #{$large-up} { left: $drawer-width-large; }
 }
 
 [data-position='right'] .pure-toggle:checked ~ .pure-pusher-container .pure-overlay {
-	right: $drawer-width;
+	right: $drawer-width-small;
+	@media #{$medium-up} { right: $drawer-width-medium; }
+	@media #{$large-up} { right: $drawer-width-large; }
 }
 
 [data-position='top'] .pure-toggle:checked ~ .pure-pusher-container .pure-overlay {
-	top: $drawer-height;
+	top: $drawer-height-small;
+	@media #{$medium-up} { top: $drawer-height-medium; }
+	@media #{$large-up} { top: $drawer-height-large; }
 }
 
 .pure-toggle:checked ~ .pure-pusher-container .pure-overlay {

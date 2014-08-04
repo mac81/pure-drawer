@@ -1,4 +1,4 @@
-Version: 0.5
+Version: 0.6
 
 Demo: http://mac81.github.io/pure-drawer/
 

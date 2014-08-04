@@ -5,8 +5,14 @@ $toggler-checked-color: #fff;
 
 // Drawer
 
-$drawer-width: 300px;
-$drawer-height: 90px;
+$drawer-width-small: 100%;
+$drawer-width-medium: 300px;
+$drawer-width-large: 400px;
+
+$drawer-height-small: 300px;
+$drawer-height-medium: 100%;
+$drawer-height-large: 100px;
+
 $drawer-bgcolor: #d95843;
 
 // Pusher

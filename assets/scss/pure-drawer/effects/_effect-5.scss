@@ -39,20 +39,34 @@
 }
 
 [data-effect='pure-effect-5'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
-	-webkit-transform: translate3d(0, 0, -$drawer-width);
-	transform: translate3d(0, 0, -$drawer-width);
+	-webkit-transform: translate3d(0, 0, -$drawer-width-small);
+	transform: translate3d(0, 0, -$drawer-width-small);
+	@media #{$medium-up} {
+		-webkit-transform: translate3d(0, 0, -$drawer-width-medium);
+		transform: translate3d(0, 0, -$drawer-width-medium);
+	}
+	@media #{$large-up} {
+		-webkit-transform: translate3d(0, 0, -$drawer-width-large);
+		transform: translate3d(0, 0, -$drawer-width-large);
+	}
 }
 
 /* Fallback for older browsers */
 
 .no-csstransforms3d {
 	[data-effect='pure-effect-5'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
-		left: $drawer-width;
+		left: $drawer-width-small;
+		@media #{$medium-up} { left: $drawer-width-medium; }
+		@media #{$large-up} { left: $drawer-width-large; }
 	}
 	[data-position='right'][data-effect='pure-effect-5'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
-		left: -$drawer-width;
+		left: -$drawer-width-small;
+		@media #{$medium-up} { left: -$drawer-width-medium; }
+		@media #{$large-up} { left: -$drawer-width-large; }
 	}
 	[data-position='top'][data-effect='pure-effect-5'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
-		top: $drawer-height;
+		top: $drawer-height-small;
+		@media #{$medium-up} { top: $drawer-height-medium; }
+		@media #{$large-up} { top: $drawer-height-large; }
 	}
 }
