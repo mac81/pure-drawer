@@ -1,16 +1,22 @@
+# Pure Drawer
+
 Version: 0.6
 
-Demo: http://mac81.github.io/pure-drawer/
+## Demo 
 
-Documentation: http://mac81.github.io/pure-drawer/documentation
+http://mac81.github.io/pure-drawer/
 
-Planned features:
+## Documentation 
+
+http://mac81.github.io/pure-drawer/documentation
+
+## Planned features
 
  - Multiple drawers
  - Javascript enhanced version
  - More effects
 
-Changelog
+## Changelog
 
 **0.6** :: *4th Aug 2014*
 
