@@ -64,22 +64,3 @@
 	}
 }
 
-/* Fallback for older browsers */
-
-.no-csstransforms3d {
-	[data-effect='pure-effect-8'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
-		left: $drawer-width-small;
-		@media #{$medium-up} { left: $drawer-width-medium; }
-		@media #{$large-up} { left: $drawer-width-large; }
-	}
-	[data-position='right'][data-effect='pure-effect-8'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
-		left: -$drawer-width-small;
-		@media #{$medium-up} { left: -$drawer-width-medium; }
-		@media #{$large-up} { left: -$drawer-width-large; }
-	}
-	[data-position='top'][data-effect='pure-effect-8'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
-		top: $drawer-height-small;
-		@media #{$medium-up} { top: $drawer-height-medium; }
-		@media #{$large-up} { top: $drawer-height-large; }
-	}
-}

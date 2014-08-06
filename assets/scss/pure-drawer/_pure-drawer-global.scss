@@ -17,8 +17,8 @@
     position: absolute;
     top: -9999px;
     &:focus ~ .pure-toggle-label {
-    	border-color: darken($toggler-color, 20%);
-    	color: darken($toggler-color, 20%);
+    	border-color: $toggler-focus-color;
+    	color: $toggler-focus-color;
     }
 }
 
@@ -28,7 +28,7 @@
     position: fixed;
     top: 15px;
 	left: 15px;
-    z-index: 999;
+    z-index: 99;
     color: $toggler-color;
     font-size: rem-calc(70);
     width: 56px;
@@ -46,8 +46,8 @@
 	user-select: none; 
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // Removes grey background on link taps in ios
     &:hover {
-    	border-color: darken($toggler-color, 20%);
-    	color: darken($toggler-color, 20%);
+    	border-color: $toggler-focus-color;
+    	color: $toggler-focus-color;
     }
     &:active {
     	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -106,7 +106,7 @@
 }
 
 [data-position='top'] .pure-drawer {
-	height: $drawer-height-small;
+	min-height: $drawer-height-small;
 	width: 100%;
 	@media #{$medium-up} { height: $drawer-height-medium; }
 	@media #{$large-up} { height: $drawer-height-large; }
@@ -117,10 +117,9 @@
 *********************/
 
 .pure-pusher-container {
-	display: table;
-	width: 100%;
-	overflow: hidden; 
-	height: inherit; 
+	position: relative;
+	height: 100%;
+	overflow: hidden;
 }
 
 /***********
@@ -128,8 +127,9 @@
 ***********/
 
 .pure-pusher {
-	display: table-cell;
 	position: relative;
+	height: 100%;
+	overflow-y: scroll;
 	left: 0;
 	z-index: 2;
 	-webkit-transition: -webkit-transform 0.5s;
@@ -148,8 +148,8 @@
 	right: 0;
 	width: 0;
 	height: 0;
-	background-color: $overlay-bgcolor;
 	opacity: 0;
+	background-color: $overlay-bgcolor;
 	-webkit-transition: opacity 0.5s 0.3s;
 	transition: opacity 0.5s 0.3s;
 }
@@ -179,6 +179,28 @@
 	z-index: 2;
 	-webkit-transition: opacity 0.5s 0.3s;
 	transition: opacity 0.5s 0.3s;
+}
+
+/********************************
+## Fallback for older browsers ##
+********************************/
+
+.no-csstransforms3d {
+	.pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+		left: $drawer-width-small;
+		@media #{$medium-up} { left: $drawer-width-medium; }
+		@media #{$large-up} { left: $drawer-width-large; }
+	}
+	[data-position='right'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+		left: -$drawer-width-small;
+		@media #{$medium-up} { left: -$drawer-width-medium; }
+		@media #{$large-up} { left: -$drawer-width-large; }
+	}
+	[data-position='top'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+		top: $drawer-height-small;
+		@media #{$medium-up} { top: $drawer-height-medium; }
+		@media #{$large-up} { top: $drawer-height-large; }
+	}
 }
 
 

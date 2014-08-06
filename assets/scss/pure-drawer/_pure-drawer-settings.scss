@@ -1,19 +1,20 @@
 // Toggler
 
-$toggler-color: #d95843;
-$toggler-checked-color: #fff;
+$toggler-color: lighten(#374c5d, 20%);
+$toggler-checked-color: #1fc08e;
+$toggler-focus-color: #1fc08e;
 
 // Drawer
 
 $drawer-width-small: 100%;
 $drawer-width-medium: 300px;
-$drawer-width-large: 400px;
+$drawer-width-large: 300px;
 
-$drawer-height-small: 300px;
+$drawer-height-small: auto;
 $drawer-height-medium: 100%;
-$drawer-height-large: 100px;
+$drawer-height-large: auto;
 
-$drawer-bgcolor: #d95843;
+$drawer-bgcolor: #00ab66;
 
 // Pusher
 

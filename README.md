@@ -1,6 +1,6 @@
 # Pure Drawer
 
-Version: 0.6
+Version: 0.7
 
 ## Demo 
 
@@ -17,6 +17,12 @@ http://mac81.github.io/pure-drawer/documentation
  - More effects
 
 ## Changelog
+
+**0.7** :: *6th Aug 2014*
+
+- Fixed issue where window pusher jumped to top when drawer is active.
+- Rearranged fallbak code
+- Adjustments to scss settings 
 
 **0.6** :: *4th Aug 2014*
 
