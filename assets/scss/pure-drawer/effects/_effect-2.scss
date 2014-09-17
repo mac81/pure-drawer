@@ -2,9 +2,17 @@
 ## Effect 2 - Reveal ##
 **********************/
 
+/* DRAWER */
+
+[data-effect='pure-effect-2'] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-2'] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-2'] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
+	visibility: visible;
+}
+
 /* PUSHER */
 
-[data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+[data-effect='pure-effect-2'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
 	-webkit-transform: translate3d($drawer-width-small, 0, 0);
 	transform: translate3d($drawer-width-small, 0, 0);
     @media #{$medium-up} {
@@ -17,7 +25,7 @@
 	}
 }
 
-[data-position='right'][data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+[data-effect='pure-effect-2'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
 	-webkit-transform: translate3d(-$drawer-width-small, 0, 0);
 	transform: translate3d(-$drawer-width-small, 0, 0);
 	@media #{$medium-up} {
@@ -30,7 +38,7 @@
 	}
 }
 
-[data-position='top'][data-effect='pure-effect-2'] .pure-toggle:checked ~ .pure-pusher-container .pure-pusher {
+[data-effect='pure-effect-2'] .pure-toggle[data-toggle='top']:checked ~ .pure-pusher-container .pure-pusher {
 	-webkit-transform: translate3d(0, $drawer-height-small, 0);
 	transform: translate3d(0, $drawer-height-small, 0);
     @media #{$medium-up} {
@@ -42,4 +50,3 @@
 		transform: translate3d(0, $drawer-height-large, 0);
 	}
 }
-

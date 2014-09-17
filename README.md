@@ -1,6 +1,6 @@
 # Pure Drawer
 
-Version: 0.7
+Version: 0.8
 
 ## Demo 
 
@@ -12,16 +12,21 @@ http://mac81.github.io/pure-drawer/documentation
 
 ## Planned features
 
- - Multiple drawers
+ - Multiple drawers (Implemented in version 0.8)
  - Javascript enhanced version
  - More effects
 
 ## Changelog
 
+**0.8** :: *17th Sep 2014*
+
+- Total rewrite of css
+- Added support for multiple drawers
+
 **0.7** :: *6th Aug 2014*
 
 - Fixed issue where window pusher jumped to top when drawer is active.
-- Rearranged fallbak code
+- Rearranged fallback code
 - Adjustments to scss settings 
 
 **0.6** :: *4th Aug 2014*

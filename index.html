@@ -10,19 +10,19 @@
         <link rel="stylesheet" href="assets/css/pure-drawer.css"/>
     </head>
     <body>
-        <div class="pure-container" data-effect="pure-effect-1" data-position="left">
-            <input type="checkbox" id="pure-toggle" class="pure-toggle">
-            <label class="pure-toggle-label" for="pure-toggle">+</label> 
+        <div class="pure-container" data-effect="pure-effect-1">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left">+</label>
 
-            <nav class="pure-drawer">
+            <nav class="pure-drawer" data-position="left">
                 <p style="padding: 100px 20px; margin: 0;">Insert your off-canvas content here</p>
-            </nav>  
+            </nav>   
             
             <div class="pure-pusher-container">
                 <div class="pure-pusher">
                     <p style="width: 300px; margin: 100px auto;">Insert your main content here</p>
                 </div>
-                <label class="pure-overlay" for="pure-toggle"></label> 
+                <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
             </div>
         </div>
     </body>
