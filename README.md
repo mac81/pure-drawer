@@ -2,6 +2,8 @@
 
 Version: 0.8
 
+Pure Drawer is a 100% css solution for off-canvas drawers.
+
 ## Demo 
 
 http://mac81.github.io/pure-drawer/
