@@ -1,0 +1,29 @@
+{
+  "convertHtml": {
+    "relativePaths": true
+  },
+  "debug": true,
+  "domain": null,
+  "lintScripts": false,
+  "modelSource": null,
+  "preprocessorLocations": [
+    "assets"
+  ],
+  "preprocessorScriptOutput": "assets/js",
+  "preprocessorStyleOutput": "assets/css",
+  "projectDescription": "A simple empty boilerplate for a fresh start",
+  "projectName": "pure-drawer",
+  "publishedId": null,
+  "sass": {
+    "sourceMap": true,
+    "useLibSass": true
+  },
+  "serverHostname": null,
+  "serverPort": null,
+  "simpleModePartnerServer": null,
+  "templateDefaultLayout": "layout",
+  "templateDefaultPage": "index",
+  "templateDirectory": "templates",
+  "type": "mixture",
+  "useCompass": false
+}

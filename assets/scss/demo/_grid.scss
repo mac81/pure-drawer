@@ -1,0 +1,234 @@
+// Modified version of Foundation by ZURB
+// See http://foundation.zurb.com/docs/components/grid.html for documentation
+
+// @variables
+//
+$include-html-grid-classes: $include-html-classes !default;
+//$include-xl-html-grid-classes: false !default;
+
+$row-width: rem-calc(1280) !default;
+$total-columns: 12 !default;
+$column-gutter: rem-calc(30) !default;
+
+
+//
+// Grid Functions
+//
+
+// @FUNCTION
+// $colNumber - Found in settings file
+// $totalColumns - Found in settings file
+@function grid-calc($colNumber, $totalColumns) {
+    @return percentage(($colNumber / $totalColumns));
+}
+
+//
+// @mixins
+//
+
+// For creating container, nested, and collapsed rows.
+//
+//
+// $behavior - Any special behavior for this row? Default: false. Options: nest, collapse, nest-collapse, false.
+@mixin grid-row($behavior: false) {
+
+    // use @include grid-row(nest); to include a nested row
+    @if $behavior == nest {
+        width: auto;
+        margin-left: -($column-gutter/2);
+        margin-right: -($column-gutter/2);
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: none;
+    }
+
+    // use @include grid-row(collapse); to collapsed a container row margins
+    @else if $behavior == expand {
+        width: 100%;
+        margin: 0;
+    }
+
+    // use @include grid-row(collapse); to collapsed a container row margins
+    @else if $behavior == collapse {
+        width: 100%;
+        margin: 0;
+        max-width: $row-width;
+    }
+
+    // use @include grid-row(nest-collapse); to collapse outer margins on a nested row
+    @else if $behavior == nest-collapse {
+        width: auto;
+        margin: 0;
+        max-width: none;
+    }
+
+    // use @include grid-row; to use a container row
+    @else {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: $row-width;
+    }
+
+    // Clearfix for all rows
+    @include clearfix();
+}
+
+// Creates a column, should be used inside of a media query to control layouts
+//
+// $columns - The number of columns this should be
+// $last-column - Is this the last column? Default: false.
+// $center - Center these columns? Default: false.
+// $offset - # of columns to offset. Default: false.
+// $push - # of columns to push. Default: false.
+// $pull - # of columns to pull. Default: false.
+// $collapse - Get rid of gutter padding on column? Default: false.
+// $float - Should this float? Default: true. Options: true, false, left, right.
+@mixin grid-column(
+    $columns:false,
+    $last-column:false,
+    $center:false,
+    $offset:false,
+    $push:false,
+    $pull:false,
+    $collapse:false,
+    $float:true,
+    $position:false) {
+
+    // If positioned for default .column, include relative position
+    // push and pull require position set
+    @if $position or $push or $pull {
+        position: relative;
+    }
+
+    // If collapsed, get rid of gutter padding
+    @if $collapse {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    // Gutter padding whenever a column isn't set to collapse
+    // (use $collapse:null to do nothing)
+    @else if $collapse == false {
+        padding-left: $column-gutter / 2;
+        padding-right: $column-gutter / 2;
+    }
+
+    // If a column number is given, calculate width
+    @if $columns {
+        width: grid-calc($columns, $total-columns);
+
+        // If last column, float naturally instead of to the right
+        @if $last-column { float: left; }
+    }
+
+    // Source Ordering, adds left/right depending on which you use.
+    @if $push { left: grid-calc($push, $total-columns); right: auto; }
+    @if $pull { right: grid-calc($pull, $total-columns); left: auto; }
+
+    @if $float {
+        @if $float == left or $float == true { float: left; }
+        @else if $float == right { float: right; }
+        @else { float: none; }
+    }
+
+    // If centered, get rid of float and add appropriate margins
+    @if $center {
+        margin-left: auto;
+        margin-right: auto;
+        float: none !important;
+    }
+
+    // If offset, calculate appropriate margins
+    @if $offset { margin-left: grid-calc($offset, $total-columns) !important; }
+}
+
+@mixin grid-row-collapse-classes($size) {
+    &.#{$size}-collapse {
+        > .column,
+        > .columns { @include grid-column($collapse:true, $float:false); }
+
+        .row {margin-left:0; margin-right:0;}
+    }
+}
+
+// Create presentational classes for grid
+//
+// $size - Name of class to use, i.e. "large" will generate .large-1, .large-2, etc.
+@mixin column-html-classes($size) {
+
+    @for $i from 0 through $total-columns - 1 {
+        .#{$size}-push-#{$i} {
+            @include grid-column($push:$i, $collapse:null, $float:false);
+        }
+        .#{$size}-pull-#{$i} {
+            @include grid-column($pull:$i, $collapse:null, $float:false);
+        }
+    }
+
+    .column,
+    .columns { @include grid-column($columns:false, $position:true); }
+
+
+    @for $i from 1 through $total-columns {
+        .#{$size}-#{$i} { @include grid-column($columns:$i,$collapse:null,$float:false); }
+    }
+
+    [class*="column"] + [class*="column"]:last-child { float: right; }
+    [class*="column"] + [class*="column"].end { float: left; }
+
+
+    @for $i from 0 through $total-columns - 1 {
+        .#{$size}-offset-#{$i} { @include grid-column($offset:$i, $collapse:null,$float:false); }
+    }
+  
+    .#{$size}-reset-order {
+        margin-left: 0;
+        margin-right: 0;
+        left: auto;
+        right: auto;
+        float: left;
+    }
+
+    .column.#{$size}-centered,
+    .columns.#{$size}-centered { @include grid-column($center:true, $collapse:null, $float:false); }
+
+    .column.#{$size}-uncentered,
+    .columns.#{$size}-uncentered {
+        margin-left: 0;
+        margin-right: 0;
+        float: left !important;
+    }
+
+    .column.#{$size}-uncentered.opposite,
+    .columns.#{$size}-uncentered.opposite {
+        float: right;
+    }
+}
+
+@if $include-html-grid-classes {
+    .row {
+        @include grid-row;
+        @media #{$small-only}  { @include grid-row-collapse-classes($size:small); }
+        @media #{$medium-only} { @include grid-row-collapse-classes($size:medium); }
+        @media #{$large-only}  { @include grid-row-collapse-classes($size:large); }
+
+        &.expand {
+            max-width: none; 
+        }
+
+        .row { @include grid-row($behavior:nest);
+            &.collapse { @include grid-row($behavior:nest-collapse); }
+        }
+    }
+
+    .column,
+    .columns { @include grid-column($columns:$total-columns); }
+
+    @media #{$small-up}  { @include column-html-classes($size:small); }
+    @media #{$medium-up} { @include column-html-classes($size:medium); }
+    @media #{$large-up}  { @include column-html-classes($size:large); }
+}
+

@@ -1,0 +1,447 @@
+$global-font-scaling-viewport: false !default;
+$header-font-scaling-viewport: true !default;
+$paragraph-font-scaling-viewport: true !default;
+
+/****************************
+## Headers ##
+****************************/
+
+// Header font styles
+$header-font-family: $body-font-family !default;
+$header-font-weight: normal !default;
+$header-font-style: normal !default;
+$header-font-color: rgba(0,0,0,0.5) !default;
+$header-line-height: 1.4 !default;
+$header-top-margin: .2rem !default;
+$header-bottom-margin: .5rem !default;
+$header-text-rendering: optimizeLegibility !default;
+
+// Header font size
+$h1-font-size: rem-calc(34) !default;
+$h2-font-size: rem-calc(27) !default;
+$h3-font-size: rem-calc(22) !default;
+$h4-font-size: rem-calc(18) !default;
+$h5-font-size: rem-calc(18) !default;
+$h6-font-size: 1rem !default;
+
+// Header font size (Viewport scaling)
+$h1-viewport-font-size: 10.5vmin !default;
+$h2-viewport-font-size: 8.5vmin !default;
+$h3-viewport-font-size: 7vmin !default;
+$h4-viewport-font-size: 5.5vmin !default;
+$h5-viewport-font-size: 5.5vmin !default;
+$h6-viewport-font-size: 5vmin !default;
+
+// Default header styles
+h1,h2,h3,h4,h5,h6 {
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+  	font-style: $header-font-style;
+  	color: $header-font-color;
+  	text-rendering: $header-text-rendering;
+  	margin-top: $header-top-margin;
+  	margin-bottom: $header-bottom-margin;
+  	line-height: $header-line-height; 	
+}
+
+h1 { 
+	font-size: $h1-font-size; 
+	@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+		font-size: $h1-viewport-font-size; 
+	}
+}
+h2 { 
+	font-size: $h2-font-size; 
+	@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+		font-size: $h2-viewport-font-size; 
+	}
+}
+h3 { 
+	font-size: $h3-font-size; 
+	@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+		font-size: $h3-viewport-font-size; 
+	}
+}
+h4 { 
+	font-size: $h4-font-size;
+	@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+		font-size: $h4-viewport-font-size; 
+	} 
+}
+h5 { 
+	font-size: $h5-font-size; 
+	@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+		font-size: $h5-viewport-font-size; 
+	}
+}	
+h6 { 
+	font-size: $h6-font-size; 
+	@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+		font-size: $h6-viewport-font-size; 
+	}
+}
+
+@media #{$medium-up} {
+	h1 { 
+		font-size: $h1-font-size + rem-calc(10); 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h1-viewport-font-size / 2; 
+		}
+	}
+	h2 { 
+		font-size: $h2-font-size + rem-calc(10); 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h2-viewport-font-size / 2; 
+		}
+	}
+	h3 { 
+		font-size: $h3-font-size + rem-calc(5); 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h3-viewport-font-size / 2; 
+		}
+	}
+	h4 { 
+		font-size: $h4-font-size + rem-calc(5);
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h4-viewport-font-size / 2; 
+		} 
+	}
+	h5 { 
+		font-size: $h5-font-size; 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h5-viewport-font-size / 2; 
+		}
+	}	
+	h6 { 
+		font-size: $h6-font-size; 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h6-viewport-font-size / 2; 
+		}
+	}
+}
+
+@media #{$large-up} {
+	h1 { 
+		font-size: $h1-font-size + rem-calc(20); 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h1-viewport-font-size / 2.5; 
+		}
+	}
+	h2 { 
+		font-size: $h2-font-size + rem-calc(20); 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h2-viewport-font-size / 2.5; 
+		}
+	}
+	h3 { 
+		font-size: $h3-font-size + rem-calc(10); 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h3-viewport-font-size / 2.5; 
+		}
+	}
+	h4 { 
+		font-size: $h4-font-size + rem-calc(10);
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h4-viewport-font-size / 2.5; 
+		} 
+	}
+	h5 { 
+		font-size: $h5-font-size; 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h5-viewport-font-size / 2.5; 
+		}
+	}	
+	h6 { 
+		font-size: $h6-font-size; 
+		@if $global-font-scaling-viewport and $header-font-scaling-viewport {
+			font-size: $h6-viewport-font-size / 2.5; 
+		}
+	}
+}
+
+/****************************
+## Paragraphs ##
+****************************/
+
+$paragraph-font-family: inherit !default;
+$paragraph-font-weight: normal !default;
+$paragraph-font-size: 1rem !default;
+$paragraph-viewport-font-size: 5vmin !default;
+$paragraph-line-height: 1.6 !default;
+$paragraph-margin-bottom: rem-calc(20) !default;
+$paragraph-aside-font-size: rem-calc(14) !default;
+$paragraph-aside-line-height: 1.35 !default;
+$paragraph-aside-font-style: italic !default;
+$paragraph-text-rendering: optimizeLegibility !default;
+
+// Default paragraph styles 
+p {
+  	font-family: $paragraph-font-family;
+  	font-weight: $paragraph-font-weight;
+  	font-size: $paragraph-font-size;
+  	@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+		font-size: $paragraph-viewport-font-size; 
+  	}
+  	line-height: $paragraph-line-height;
+  	margin-bottom: $paragraph-margin-bottom;
+  	text-rendering: $paragraph-text-rendering;
+}
+
+@media #{$medium-up} {
+	p { 
+		font-size: $paragraph-font-size + rem-calc(2); 
+		@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+			font-size: $paragraph-viewport-font-size / 2; 
+	  	}
+	}
+}
+
+@media #{$large-up} {
+	p { 
+		@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+			font-size: $paragraph-viewport-font-size / 2.5; 
+	  	}
+	}
+}
+
+/****************************
+## Anchors ##
+****************************/
+
+$anchor-text-decoration: none !default;
+$anchor-text-decoration-hover: none !default;
+$anchor-font-color: $primary-color !default;
+$anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%) !default;
+
+a {
+    color: $anchor-font-color;
+    text-decoration: $anchor-text-decoration;
+    line-height: inherit;
+    &:hover,
+    &:focus {
+        color: $anchor-font-color-hover;
+        @if $anchor-text-decoration-hover != $anchor-text-decoration {
+        	text-decoration: $anchor-text-decoration-hover;
+        }
+    }
+
+    img { border:none; }
+}
+
+/****************************
+## Strong ##
+****************************/
+
+strong,
+b {
+	font-weight: $font-weight-bold;
+  	line-height: inherit;	
+}
+  	
+/****************************
+## Em ##
+****************************/
+
+em,
+i {
+  	font-style: italic;
+  	line-height: inherit;
+}
+
+/****************************
+## Lists ##
+****************************/
+
+$list-font-family: $paragraph-font-family !default;
+$list-font-size: $paragraph-font-size !default;
+$list-viewport-font-size: $paragraph-viewport-font-size !default;
+$list-line-height: $paragraph-line-height !default;
+$list-margin-bottom: $paragraph-margin-bottom !default;
+$list-style-position: outside !default;
+$list-side-margin: 1.1rem !default;
+$list-ordered-side-margin: 1.4rem !default;
+$list-side-margin-no-bullet: 0 !default;
+$list-nested-margin: rem-calc(0) !default;
+$definition-list-header-weight: $font-weight-bold !default;
+$definition-list-header-margin-bottom: .3rem !default;
+$definition-list-margin-bottom: rem-calc(12) !default;
+
+/* Lists */
+ul,
+ol,
+dl {
+  	font-size: $list-font-size;
+  	@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+		font-size: $list-viewport-font-size; 
+  	}
+  	line-height: $list-line-height;
+  	margin-bottom: $list-margin-bottom;
+  	list-style-position: $list-style-position;
+  	font-family: $list-font-family;
+}
+
+/* Unordered Lists */
+ul {
+	margin-left: $list-side-margin;
+    li {
+        ul,
+        ol {
+        	margin-top: 0;
+          	margin-left: $list-nested-margin;
+          	margin-bottom: 0;
+        }
+    }
+    &.square,
+    &.circle,
+    &.disc {
+        li ul { list-style: inherit; }
+    }
+
+    &.square { list-style-type: square; margin-left: $list-side-margin;}
+    &.circle { list-style-type: circle; margin-left: $list-side-margin;}
+    &.disc { list-style-type: disc; margin-left: $list-side-margin;}
+    &.no-bullet { list-style: none; }
+
+    &.no-bullet {
+    	margin-left: $list-side-margin-no-bullet;
+    	li {
+	      	ul,
+	      	ol {
+	        	margin-left: $list-nested-margin;
+	        	margin-bottom: 0;
+	        	list-style: none;
+	      	}
+    	}
+  	}
+}
+
+/* Ordered Lists */
+ol {
+  	margin-left: $list-ordered-side-margin;
+	li {
+	    ul,
+	    ol {
+	    	margin-top: 0;
+	      	margin-left: $list-nested-margin;
+	      	margin-bottom: 0;
+	    }
+	}
+}
+
+/* Definition Lists */
+dl {
+  	dt {
+    	margin-bottom: $definition-list-header-margin-bottom;
+    	font-weight: $definition-list-header-weight;
+  	}
+  	dd { margin-bottom: $definition-list-margin-bottom; }
+}
+
+@media #{$medium-up} {
+	ul,
+	ol,
+	dl { 
+		font-size: $list-font-size + rem-calc(2); 
+		@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+			font-size: $list-viewport-font-size / 2; 
+	  	}
+	}
+}
+
+@media #{$large-up} {
+	ul,
+	ol,
+	dl { 
+		@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+			font-size: $list-viewport-font-size / 2.5; 
+	  	}
+	}
+}
+
+/****************************
+## Blockquote ##
+****************************/
+
+$blockquote-font-color: scale-color($header-font-color, $lightness: 35%) !default;
+$blockquote-padding: rem-calc(9 20 0 19) !default;
+$blockquote-border: 1px solid #ddd !default;
+$blockquote-cite-font-size: rem-calc(13) !default;
+$blockquote-cite-viewport-font-size: $paragraph-viewport-font-size - 1 !default;
+$blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%) !default;
+$blockquote-cite-link-color: $blockquote-cite-font-color !default;
+
+blockquote {
+  	margin: 0 0 $paragraph-margin-bottom;
+  	padding: $blockquote-padding;
+  	border-left: $blockquote-border;
+
+  	cite {
+    	display: block;
+    	font-size: $blockquote-cite-font-size;
+    	color: $blockquote-cite-font-color;
+    	@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+			font-size: $blockquote-cite-viewport-font-size;
+	  	}
+	    &:before {
+	      	content: "\2014 \0020";
+	    }
+
+	    a,
+	    a:visited {
+	    	font-size: $blockquote-cite-font-size;
+	      	color: $blockquote-cite-link-color;
+	      	@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+				font-size: $blockquote-cite-viewport-font-size;
+		  	}
+	    }
+  	}
+}
+blockquote,
+blockquote p {
+  	line-height: $paragraph-line-height;
+  	color: $blockquote-font-color;
+}
+
+@media #{$medium-up} {
+	blockquote {
+		cite,
+		cite a {
+			font-size: $blockquote-cite-font-size + rem-calc(2); 
+			@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+				font-size: $blockquote-cite-viewport-font-size / 2; 
+		  	}
+		}
+	}
+}
+
+@media #{$large-up} {
+	blockquote { 
+		cite,
+		cite a {
+			@if $global-font-scaling-viewport and $paragraph-font-scaling-viewport {
+				font-size: $blockquote-cite-viewport-font-size / 2.5; 
+		  	}
+		}
+	}
+}
+
+
+// A general <small> styling
+$small-font-size: 80% !default;
+$small-font-color: scale-color($header-font-color, $lightness: 35%) !default;
+small {
+      font-size: $small-font-size;
+      line-height: inherit;
+    }
+
+// We use these to style <code> tags
+$code-color: scale-color($alert-color, $lightness: -27%) !default;
+$code-font-family: Consolas, 'Liberation Mono', Courier, monospace !default;
+$code-font-weight: $font-weight-bold !default;
+    code {
+      font-family: $code-font-family;
+      font-weight: $code-font-weight;
+      color: $code-color;
+    }
+
+

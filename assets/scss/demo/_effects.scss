@@ -1,0 +1,44 @@
+.pure-drawer {
+	visibility: hidden;
+}
+
+[data-effect='pure-effect-1'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-1'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-1'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'],
+
+[data-effect='pure-effect-2'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-2'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-2'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'],
+
+[data-effect='pure-effect-3'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-3'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-3'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'],
+
+[data-effect='pure-effect-4'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-4'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-4'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'],
+
+[data-effect='pure-effect-5'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-5'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-5'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'],
+
+[data-effect='pure-effect-6'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-6'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-6'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'],
+
+[data-effect='pure-effect-7'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-7'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-7'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'],
+
+[data-effect='pure-effect-8'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-8'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-8'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'],
+
+[data-effect='pure-effect-9'] .pure-toggle-left:checked ~ .pure-drawer[data-position='left'],
+[data-effect='pure-effect-9'] .pure-toggle-right:checked ~ .pure-drawer[data-position='right'],
+[data-effect='pure-effect-9'] .pure-toggle-top:checked ~ .pure-drawer[data-position='top'] {    
+	visibility: visible;
+}
+
+
+

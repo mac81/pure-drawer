@@ -1,0 +1,115 @@
+@mixin box-sizing($type:border-box) {
+  -webkit-box-sizing: $type; // Android < 2.3, iOS < 4
+       -moz-box-sizing: $type; // Firefox < 29
+            box-sizing: $type; // Chrome, IE 8+, Opera, Safari 5.1
+}
+
+@mixin clearfix {
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
+
+$include-html-classes: true !default;
+
+$rem-base: 16px !default;
+$base-font-size: 100% !default;
+$base-line-height: 150% !default;
+
+// We use these to control various global styles
+$body-bg: #fff !default;
+$body-font-color: #222 !default;
+$body-font-family: "Open Sans", "Helvetica", Helvetica, Arial, sans-serif !default;
+$body-font-weight: normal !default;
+$body-font-style: normal !default;
+
+// We use this to control font-smoothing
+$font-smoothing: antialiased !default;
+
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+$primary-color: #008CBA !default;
+$secondary-color: #e7e7e7 !default;
+$alert-color: #f04124 !default;
+$success-color: #43AC6A !default;
+$warning-color: #f08a24 !default;
+$info-color: #a0d3e8 !default;
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*:before,
+*:after {
+    @include box-sizing(border-box);
+}
+
+html,
+body { 
+    height: 100%;
+    font-size: $base-font-size; 
+}
+
+body {
+    background: $body-bg;
+    color: $body-font-color;
+    padding: 0;
+    margin: 0;
+    font-family: $body-font-family;
+    font-weight: $body-font-weight;
+    font-style: $body-font-style;
+    line-height: 1; // Set to $base-line-height to take on browser default of 150%
+    position: relative;
+    cursor: default;
+    @extend .antialiased;
+}
+
+a:hover { cursor: pointer; }
+
+// Grid Defaults to get images and embeds to work properly
+img { max-width: 100%; height: auto; }
+
+img { -ms-interpolation-mode: bicubic; }
+
+#map_canvas,
+.map_canvas {
+    img,
+    embed,
+    object { 
+        max-width: none !important;
+    }
+}
+
+// Miscellaneous useful HTML classes
+.left { float: left !important; }
+.right { float: right !important; }
+.clearfix { @include clearfix; }
+.hide { display: none; }
+
+// Font smoothing
+// Antialiased font smoothing works best for light text on a dark background.
+// Apply to single elements instead of globally to body.
+// Note this only applies to webkit-based desktop browsers and Firefox 25 (and later) on the Mac.
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+// Get rid of gap under images by making them display: inline-block; by default
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+//
+// Global resets for forms
+//
+
+// Make sure textarea takes on height automatically
+textarea { height: auto; min-height: 50px; }
+
+// Make select elements 100% width by default
+select { width: 100%; }
+
+.visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}

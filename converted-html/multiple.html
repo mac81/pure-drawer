@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Title block allowing child pages to override -->
+        <title>Pure Drawer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1 minimal-ui">
+        
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <div class="pure-container" data-effect="pure-effect-8">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"/>
+            <input type="checkbox" id="pure-toggle-top" class="pure-toggle" data-toggle="top"/>
+            
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left">+</label>
+            <label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right">+</label> 
+            <label class="pure-toggle-label" for="pure-toggle-top" data-toggle-label="top">+</label>  
+
+            <nav class="pure-drawer" data-position="left">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="documentation.html">Documentation</a></li>
+                            <li><a href="features.html">Planned Features</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="pure-drawer" data-position="right">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="documentation.html">Documentation</a></li>
+                            <li><a href="features.html">Planned Features</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="pure-drawer" data-position="top">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="documentation.html">Documentation</a></li>
+                            <li><a href="features.html">Planned Features</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>    
+            
+            <div class="pure-pusher-container">
+                <div class="pure-pusher">
+                    
+    <section class="demo section section-multiple" data-scroll-index="0" id="demo">
+		<div class="row">
+			<div class="large-12 columns">
+				<h3 class="section-title">Try out the new multiple drawers!</h3>
+				<div class="drawer-position">
+					<h4 class="section-subtitle"><span>Choose target drawer:</span></h4>
+					<ul>
+						<li>
+							<input type="radio" id="left" name="target" value="left" checked="checked"/>
+							<label for="left" class="">Left</label>
+						</li>
+						<li>
+							<input type="radio" id="top" name="target" value="top"/>
+							<label for="top" class="">Top</label>
+						</li>
+						<li>
+							<input type="radio" id="right" name="target" value="right"/>
+							<label for="right" class="">Right</label>
+						</li>
+					</ul>
+				</div>
+				<div class="drawer-effect">
+					<h4 class="section-subtitle"><span>Choose effect:</span></h4>
+					<p class="notice">Because of the nature of some of the effects they are not compliant with the top position drawer</p>
+					<ul>
+						<li><a href="#" class="button active alternate" data-effect="pure-effect-1">Slide in on top</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-2">Reveal</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-3">Slide along</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-4">Reverse slide out</a></li>
+						<li><a href="#" class="button alternate" data-effect="pure-effect-5">Scale Down Pusher</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-6">Scale Up</a></li>
+						<li><a href="#" class="button alternate" data-effect="pure-effect-7">Scale and Rotate Pusher</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-8">Fall Down</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-9">Push</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+                </div>
+                <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
+                <label class="pure-overlay" for="pure-toggle-right" data-overlay="right"></label>
+                <label class="pure-overlay" for="pure-toggle-top" data-overlay="top"></label> 
+            </div>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="assets/js/vendor/prism.min.js"></script>
+        <script src="assets/js/vendor/scrollIt.min.js"></script>
+        <script src="assets/js/vendor/jquery.scrollTo.min.js"></script>
+        <script src="assets/js/vendor/jquery.localScroll.min.js"></script>
+        <script src="assets/js/vendor/smoothscroll.min.js"></script>
+        <script src="assets/js/vendor/wow.min.js"></script>
+        <script src="assets/js/vendor/stellar.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>
+

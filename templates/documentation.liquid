@@ -1,0 +1,117 @@
+{% block content %}
+	<div class="section section-first row">
+		<div class="large-12 columns">
+			<h1 class="title">Documentation</h1>
+			<ol class="nav-documentation">
+				<li><a href="#setup">Setup</a></li>
+				<li><a href="#markup">Markup</a></li>
+				<li><a href="#scss">SCSS</a></li>
+				<li><a href="#css">CSS</a></li>
+				<li><a href="#js">Javascript</a></li>
+				<li><a href="#browser">Browser support</a></li>
+			</ol>
+		</div>
+		<p class="panel">Documentation is deprecated as of version 0.8. New documentation will be up shortly</p>
+	</div>
+	<div id="setup" class="section row">
+		<div class="large-12 columns">
+			<h2 class="subtitle">Setup</h2>
+			<p>Head over to <a href="https://github.com/mac81/pure-drawer">Github</a> and download either the scss or css version or <a href="https://github.com/mac81/pure-drawer/archive/master.zip">download</a> all files. Further documentation below.</p>	
+		</div>
+	</div>
+	<div id="markup" class="section row">
+		<div class="large-12 columns">
+			<h2 class="subtitle">Markup</h2>
+			<p>It is important that the markup is in the same order as below due to the use of the css sibling selector. If you add additional containers to your markup you need to update the css accordingly.</p>	
+<div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-1" data-position="left"&gt;
+    &lt;input type="checkbox" id="pure-toggle" class="pure-toggle"&gt;
+    &lt;label class="pure-toggle-label" for="pure-toggle"&gt;+&lt;/label&gt; 
+
+    &lt;div class="pure-drawer"&gt;
+        Put your off canvas content here
+    &lt;/div&gt;  
+    &lt;div class="pure-pusher-container"&gt;
+    	&lt;div class="pure-pusher"&gt;
+        	Put your site content here
+        &lt;/div&gt;
+    	&lt;label class="pure-overlay" for="pure-toggle"&gt;&lt;/label&gt; 
+	&lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>	
+</div>
+		</div>
+		<div class="large-12 columns">
+			<h3 class="doc-title">Attributes</h3>
+			<p><strong>data-effect:</strong> This is where you enter your desired effect. Ranges from 1-9.</p>
+			<p><strong>data-position:</strong> This is where you enter your desired drawer position. Legal values are 'left', 'right' and 'top'.</p>
+		</div>
+	</div>
+
+	<div id="scss" class="section row">
+		<div class="large-12 columns">
+			<h2 class="subtitle">SCSS Settings</h2>
+			<div class="code-wrap">
+<pre>
+<code class="language-scss">// Toggler
+
+$toggler-color: #d95843;
+$toggler-checked-color: #fff;
+
+// Drawer
+
+$drawer-width-small: 100%;
+$drawer-width-medium: 300px;
+$drawer-width-large: 400px;
+
+$drawer-height-small: 300px;
+$drawer-height-medium: 100%;
+$drawer-height-large: 100px;
+
+$drawer-bgcolor: #d95843;
+
+// Pusher
+
+$pusher-bgcolor: #fff;
+
+// Pusher Overlay
+
+$overlay-bgcolor: rgba(0,0,0,0.4);</code>
+</pre>			
+			</div>	
+
+		</div>
+		<div class="large-12 columns">
+			<h3 class="doc-title">Breakpoints</h3>
+			<p>Breakpoints are now included in the breakpoints.scss file. Set drawer width and height for small, medium and large screens.</p>
+		</div>
+	</div>
+
+	<div id="css" class="section row">
+		<div class="large-12 columns">
+			<h2 class="subtitle">CSS</h2>
+			<p>Coming soon</p>	
+		</div>
+	</div>  
+
+	<div id="js" class="section row">
+		<div class="large-12 columns">
+			<h2 class="subtitle">Javascript</h2>
+			<p>There is no javascript! But feel free to enhance the functionality further with some awesome javascript code.</p>	
+		</div>
+	</div> 
+
+	<div id="browser" class="section row">
+		<div class="large-12 columns">
+			<h2 class="subtitle">Browser support</h2>
+			<p>Works in all modern browsers. (IE10+, Chrome, Firefox, Safari).</p>
+			<p>Gracefully degrades in IE9. (Requires Modernizr).</p>
+			<p>Not yet tested on Android.</p>	
+		</div>
+	</div>   
+{% endblock %}
+
+{% block scripts %}
+	{{ "vendor/prism.js" | asset_url | script_tag }}
+{% endblock %}

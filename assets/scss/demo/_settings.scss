@@ -1,0 +1,156 @@
+/****************************
+## Global ##
+****************************/
+
+// $include-html-classes: true;
+
+// $rem-base: 16px;
+// $base-font-size: 100%;
+// $base-line-height: 150%;
+
+// $body-bg: #fff;
+$body-font-color: #374c5d;
+$body-font-family: "Lato", "Helvetica", Helvetica, Arial, sans-serif;
+// $body-font-weight: normal;
+// $body-font-style: normal;
+
+// $font-smoothing: antialiased;
+
+// $font-weight-normal: normal;
+// $font-weight-bold: bold;
+
+/****************************
+## Colors ##
+****************************/
+
+$primary-color: #d95843;
+// $secondary-color: #e7e7e7;
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+/****************************
+## Media Queries ##
+****************************/
+
+// $small-range: (0em, 40em);
+// $medium-range: (40.063em, 64em);
+// $large-range: (64.063em, 90em);
+// $xlarge-range: (90.063em, 120em);
+// $xxlarge-range: (120.063em, 99999999em);
+
+// $screen: "only screen";
+
+// $landscape: "#{$screen} and (orientation: landscape)";
+// $portrait: "#{$screen} and (orientation: portrait)";
+
+// $small-up: $screen;
+// $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+// $medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+// $medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+// $large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+// $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";
+
+// $xlarge-up: "#{$screen} and (min-width:#{lower-bound($xlarge-range)})";
+// $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max-width:#{upper-bound($xlarge-range)})";
+
+// $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
+// $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
+
+/****************************
+## Typography ##
+****************************/
+
+/* Viewport scaling settings */
+
+// $global-font-scaling-viewport: false;
+// $header-font-scaling-viewport: true;
+// $paragraph-font-scaling-viewport: true;
+
+
+// Header font styles
+
+$header-font-family: 'Roboto Slab';
+$header-font-weight: 300;
+// $header-font-style: normal;
+$header-font-color: darken(#374c5d, 10%);
+// $header-line-height: 1.4;
+// $header-top-margin: .2rem;
+// $header-bottom-margin: .5rem;
+// $header-text-rendering: optimizeLegibility;
+
+
+// Header font size
+
+// $h1-font-size: rem-calc(34);
+// $h2-font-size: rem-calc(27);
+// $h3-font-size: rem-calc(22);
+// $h4-font-size: rem-calc(18);
+// $h5-font-size: rem-calc(18);
+// $h6-font-size: 1rem;
+
+
+// Header font size (Viewport scaling)
+
+// $h1-viewport-font-size: 10.5vmin;
+// $h2-viewport-font-size: 8.5vmin;
+// $h3-viewport-font-size: 7vmin;
+// $h4-viewport-font-size: 5.5vmin;
+// $h5-viewport-font-size: 5.5vmin;
+// $h6-viewport-font-size: 5vmin;
+
+
+// Paragraphs
+
+// $paragraph-font-family: inherit;
+// $paragraph-font-weight: normal;
+// $paragraph-font-size: 1rem;
+// $paragraph-viewport-font-size: 5vmin;
+// $paragraph-line-height: 1.6;
+// $paragraph-margin-bottom: rem-calc(20);
+// $paragraph-aside-font-size: rem-calc(14);
+// $paragraph-aside-line-height: 1.35;
+// $paragraph-aside-font-style: italic;
+// $paragraph-text-rendering: optimizeLegibility;
+
+
+// Anchors
+
+// $anchor-text-decoration: none;
+// $anchor-text-decoration-hover: none;
+// $anchor-font-color: $primary-color;
+// $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
+
+
+// Lists
+
+// $list-font-family: $paragraph-font-family;
+// $list-font-size: $paragraph-font-size;
+// $list-viewport-font-size: $paragraph-viewport-font-size;
+// $list-line-height: $paragraph-line-height;
+// $list-margin-bottom: $paragraph-margin-bottom;
+// $list-style-position: outside;
+// $list-side-margin: 1.1rem;
+// $list-ordered-side-margin: 1.4rem;
+// $list-side-margin-no-bullet: 0;
+// $list-nested-margin: rem-calc(0);
+// $definition-list-header-weight: $font-weight-bold;
+// $definition-list-header-margin-bottom: .3rem;
+// $definition-list-margin-bottom: rem-calc(12);
+
+
+// Blockquotes
+
+// $blockquote-font-color: scale-color($header-font-color, $lightness: 35%);
+// $blockquote-padding: rem-calc(9 20 0 19);
+// $blockquote-border: 1px solid #ddd;
+// $blockquote-cite-font-size: rem-calc(13);
+// $blockquote-cite-viewport-font-size: $paragraph-viewport-font-size - 1;
+// $blockquote-cite-font-color: scale-color($header-font-color, $lightness: 23%);
+
+body {
+	background: red;
+}
