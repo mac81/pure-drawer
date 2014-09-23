@@ -83,8 +83,8 @@
     	&lt;div class="pure-pusher"&gt;
         	Put your site content here
         &lt;/div&gt;
-    	&lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
 	&lt;/div&gt;
+	&lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
 &lt;/div&gt;</code>
 </pre>	
 				</div>
@@ -117,11 +117,12 @@
     &lt;div class="pure-pusher-container"&gt;
     	&lt;div class="pure-pusher"&gt;
         	Put your site content here
-        &lt;/div&gt;
-    	&lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
-    	&lt;label class="pure-overlay" for="pure-toggle-right" data-overlay="right"&gt;&lt;/label&gt; 
-    	&lt;label class="pure-overlay" for="pure-toggle-top" data-overlay="top"&gt;&lt;/label&gt; 
+        &lt;/div&gt; 
 	&lt;/div&gt;
+
+	&lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
+	&lt;label class="pure-overlay" for="pure-toggle-right" data-overlay="right"&gt;&lt;/label&gt; 
+	&lt;label class="pure-overlay" for="pure-toggle-top" data-overlay="top"&gt;&lt;/label&gt;
 &lt;/div&gt;</code>
 </pre>	
 				</div>
@@ -177,7 +178,10 @@
 				<h3>Settings</h3>
 				<div class="code-wrap">
 <pre>
-<code class="language-scss">/************
+<code class="language-scss">// Point $show-drawer to one of the variables in _pure-drawer-breakpoints.scss to control which breakpoints drawers should appear.
+//$show-drawer: $small-only; 
+
+/************
 ## Toggler ##
 ************/
 
@@ -274,8 +278,8 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
 	</div>   
 
                 </div>
-                <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
             </div>
+            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
         </div>
 
         

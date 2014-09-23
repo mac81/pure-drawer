@@ -2,31 +2,41 @@
 ## Effect 1 - Slide in on top ##
 *******************************/
 
-/* DRAWER */
+@mixin effect-1() {
+	/* DRAWER */
+	[data-effect='pure-effect-1'] .pure-drawer {
+	    z-index: 3;	
+	}
 
-[data-effect='pure-effect-1'] .pure-drawer {
-    z-index: 3;	
+	[data-effect='pure-effect-1'] .pure-drawer[data-position='left'] {
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	[data-effect='pure-effect-1'] .pure-drawer[data-position='right'] {
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);	
+	}
+
+	[data-effect='pure-effect-1'] .pure-drawer[data-position='top'] {
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);	
+	}
+
+	[data-effect='pure-effect-1'] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'],
+	[data-effect='pure-effect-1'] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'],
+	[data-effect='pure-effect-1'] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
+		visibility: visible;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
 }
 
-[data-effect='pure-effect-1'] .pure-drawer[data-position='left'] {
-	-webkit-transform: translate3d(-100%, 0, 0);
-	transform: translate3d(-100%, 0, 0);
+@if($show-drawer == 'all') {
+	@include effect-1;
+} @else {
+	@media #{$show-drawer} {
+		@include effect-1;
+	}	
 }
 
-[data-effect='pure-effect-1'] .pure-drawer[data-position='right'] {
-	-webkit-transform: translate3d(100%, 0, 0);
-	transform: translate3d(100%, 0, 0);	
-}
-
-[data-effect='pure-effect-1'] .pure-drawer[data-position='top'] {
-	-webkit-transform: translate3d(0, -100%, 0);
-	transform: translate3d(0, -100%, 0);	
-}
-
-[data-effect='pure-effect-1'] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'],
-[data-effect='pure-effect-1'] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'],
-[data-effect='pure-effect-1'] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
-	visibility: visible;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-}
