@@ -1,7 +1,6 @@
 {% block content %}
-	<div class="section section-first row">
-		<div class="large-12 columns">
-			<h1 class="title">Documentation</h1>
+	<div class="row">
+		<div class="large-3 columns">
 			<ol class="nav-documentation">
 				<li><a href="#setup">Setup</a></li>
 				<li><a href="#markup">Markup</a></li>
@@ -11,103 +10,219 @@
 				<li><a href="#browser">Browser support</a></li>
 			</ol>
 		</div>
-		<p class="panel">Documentation is deprecated as of version 0.8. New documentation will be up shortly</p>
-	</div>
-	<div id="setup" class="section row">
-		<div class="large-12 columns">
-			<h2 class="subtitle">Setup</h2>
-			<p>Head over to <a href="https://github.com/mac81/pure-drawer">Github</a> and download either the scss or css version or <a href="https://github.com/mac81/pure-drawer/archive/master.zip">download</a> all files. Further documentation below.</p>	
-		</div>
-	</div>
-	<div id="markup" class="section row">
-		<div class="large-12 columns">
-			<h2 class="subtitle">Markup</h2>
-			<p>It is important that the markup is in the same order as below due to the use of the css sibling selector. If you add additional containers to your markup you need to update the css accordingly.</p>	
-<div class="code-wrap">
-<pre>
-<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-1" data-position="left"&gt;
-    &lt;input type="checkbox" id="pure-toggle" class="pure-toggle"&gt;
-    &lt;label class="pure-toggle-label" for="pure-toggle"&gt;+&lt;/label&gt; 
+		<div class="large-9 columns documentation">
+			<h1 class="title">Documentation</h1>
+			
+			<div id="setup" class="section">
+				<h2 class="subtitle">Setup</h2>
+				<p>Head over to <a href="https://github.com/mac81/pure-drawer">Github</a> and download either the scss or css version or <a href="https://github.com/mac81/pure-drawer/archive/master.zip">download</a> all files. Further documentation below.</p>	
+			</div>
+			
+			<div id="markup" class="section">
+				<h2 class="subtitle">Markup</h2>
+				<p>It is important that the markup is in the same order as below due to the use of the css sibling selector. If you add additional containers to your markup you need to update the css accordingly.</p>
 
-    &lt;div class="pure-drawer"&gt;
+				<h3>Single Drawer</h3>	
+				<div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-1"&gt;
+    &lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
+    &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;+&lt;/label&gt; 
+
+    &lt;div class="pure-drawer" data-position="left"&gt;
         Put your off canvas content here
     &lt;/div&gt;  
     &lt;div class="pure-pusher-container"&gt;
     	&lt;div class="pure-pusher"&gt;
         	Put your site content here
         &lt;/div&gt;
-    	&lt;label class="pure-overlay" for="pure-toggle"&gt;&lt;/label&gt; 
+    	&lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
 	&lt;/div&gt;
 &lt;/div&gt;</code>
 </pre>	
-</div>
-		</div>
-		<div class="large-12 columns">
-			<h3 class="doc-title">Attributes</h3>
-			<p><strong>data-effect:</strong> This is where you enter your desired effect. Ranges from 1-9.</p>
-			<p><strong>data-position:</strong> This is where you enter your desired drawer position. Legal values are 'left', 'right' and 'top'.</p>
-		</div>
-	</div>
+				</div>
 
-	<div id="scss" class="section row">
-		<div class="large-12 columns">
-			<h2 class="subtitle">SCSS Settings</h2>
-			<div class="code-wrap">
+				<h3>Multiple Drawers</h3>
+				<div class="code-wrap">
 <pre>
-<code class="language-scss">// Toggler
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-1"&gt;
 
-$toggler-color: #d95843;
-$toggler-checked-color: #fff;
+    &lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
+    &lt;input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"&gt;
+    &lt;input type="checkbox" id="pure-toggle-top" class="pure-toggle" data-toggle="top"&gt;
+    
+    &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;+&lt;/label&gt; 
+    &lt;label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"&gt;+&lt;/label&gt; 
+    &lt;label class="pure-toggle-label" for="pure-toggle-top" data-toggle-label="top"&gt;+&lt;/label&gt; 
 
-// Drawer
+    &lt;div class="pure-drawer" data-position="left"&gt;
+        Put your off canvas content for the left drawer here
+    &lt;/div&gt;
 
+    &lt;div class="pure-drawer" data-position="right"&gt;
+        Put your off canvas content for the right drawer here
+    &lt;/div&gt;  
+
+    &lt;div class="pure-drawer" data-position="top"&gt;
+        Put your off canvas content for the top drawer here
+    &lt;/div&gt;  
+
+    &lt;div class="pure-pusher-container"&gt;
+    	&lt;div class="pure-pusher"&gt;
+        	Put your site content here
+        &lt;/div&gt;
+    	&lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
+    	&lt;label class="pure-overlay" for="pure-toggle-right" data-overlay="right"&gt;&lt;/label&gt; 
+    	&lt;label class="pure-overlay" for="pure-toggle-top" data-overlay="top"&gt;&lt;/label&gt; 
+	&lt;/div&gt;
+&lt;/div&gt;</code>
+</pre>	
+				</div>
+
+				<h3 class="doc-title">Attributes</h3>
+
+				<div class="sub-section">
+					<h4>Container</h4>
+					<div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-1"&gt;</code>
+</pre>
+					</div>
+					<p><strong>data-effect:</strong> This is where you enter your desired effect. Ranges from 1-9.</p>
+				</div>
+				
+				<div class="sub-section">
+					<h4>Drawer</h4>
+					<div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;div class="pure-drawer" data-position="left"&gt;</code>
+</pre>
+					</div>
+					<p><strong>data-position:</strong>Where you want you off-canvas drawer to appear. Legal values are 'left', 'right' and 'top'.</p>
+				</div>
+
+				<div class="sub-section">
+					<h4>Toggler</h4>
+					<div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
+&lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;+&lt;/label&gt;</code>
+</pre>
+					</div>
+					<p><strong>data-toggle:</strong>Used to target the the toggle in css. Must match the value of data-position.</p>
+					<p><strong>data-toggle-label:</strong>Used to target the the toggle label in css. Must match the value of data-toggle.</p>
+				</div>
+
+				<div class="sub-section">
+					<h4>Overlay</h4>
+					<div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt;</code>
+</pre>
+					</div>
+					<p><strong>data-overlay:</strong>Used to target the the overlay in css. Must match the value of data-position.</p>
+				</div>
+			</div>
+		
+
+			<div id="scss" class="section">
+				<h2 class="subtitle">SCSS</h2>
+				<h3>Settings</h3>
+				<div class="code-wrap">
+<pre>
+<code class="language-scss">/************
+## Toggler ##
+************/
+
+$toggler-color: lighten(#374c5d, 20%);
+$toggler-checked-color: #1fc08e;
+$toggler-focus-color: #1fc08e;
+
+/***********
+## Drawer ##
+***********/
+
+$drawer-bgcolor: #00ab66;
+
+// For 'left' and 'right' positioned drawers.
 $drawer-width-small: 100%;
 $drawer-width-medium: 300px;
-$drawer-width-large: 400px;
+$drawer-width-large: 300px;
 
-$drawer-height-small: 300px;
+// For 'top' positioned drawers.
+$drawer-height-small: 100%;
 $drawer-height-medium: 100%;
 $drawer-height-large: 100px;
 
-$drawer-bgcolor: #d95843;
-
-// Pusher
+/***********
+## Pusher ##
+***********/
 
 $pusher-bgcolor: #fff;
 
-// Pusher Overlay
+/*******************
+## Pusher Overlay ##
+*******************/
 
 $overlay-bgcolor: rgba(0,0,0,0.4);</code>
 </pre>			
-			</div>	
+				</div>
+				<h3 class="doc-title">Breakpoints</h3>
+				<p>Media queries can be easily customized by changing the variable values in _pure-drawer-breakpoints.scss.</p>
+				<div class="code-wrap">
+<pre>
+<code class="language-scss">// Media Query Ranges
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);
+$large-range: (64.063em, 90em);
 
-		</div>
-		<div class="large-12 columns">
-			<h3 class="doc-title">Breakpoints</h3>
-			<p>Breakpoints are now included in the breakpoints.scss file. Set drawer width and height for small, medium and large screens.</p>
-		</div>
-	</div>
+$screen: "only screen";
 
-	<div id="css" class="section row">
-		<div class="large-12 columns">
-			<h2 class="subtitle">CSS</h2>
-			<p>Coming soon</p>	
-		</div>
-	</div>  
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
 
-	<div id="js" class="section row">
-		<div class="large-12 columns">
-			<h2 class="subtitle">Javascript</h2>
-			<p>There is no javascript! But feel free to enhance the functionality further with some awesome javascript code.</p>	
-		</div>
-	</div> 
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
 
-	<div id="browser" class="section row">
-		<div class="large-12 columns">
-			<h2 class="subtitle">Browser support</h2>
-			<p>Works in all modern browsers. (IE10+, Chrome, Firefox, Safari).</p>
-			<p>Gracefully degrades in IE9. (Requires Modernizr).</p>
-			<p>Not yet tested on Android.</p>	
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+$large-down: "#{$screen} and (max-width:#{upper-bound($medium-range)})";
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";</code>
+</pre>
+				</div>
+				<p>Use these media queries with the variables specified above.</p>
+				<div class="code-wrap">
+<pre>
+<code class="language-scss">@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }</code>
+</pre>
+				</div>	
+			</div>
+
+			<div id="css" class="section">
+				<h2 class="subtitle">CSS</h2>
+				<p>Coming at a later stage</p>	
+			</div>  
+
+			<div id="js" class="section">
+				<h2 class="subtitle">Javascript</h2>
+				<p>There is no javascript! But feel free to enhance the functionality further with some awesome javascript code.</p>	
+			</div> 
+
+			<div id="browser" class="section">
+				<h2 class="subtitle">Browser support</h2>
+				<p>Works in all modern browsers. (IE10+, Chrome, Firefox, Safari).</p>
+				<p>Gracefully degrades in IE9. (Requires Modernizr).</p>
+				<p>Not yet tested on Windows Phone.</p>	
+			</div>
 		</div>
 	</div>   
 {% endblock %}

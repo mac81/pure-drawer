@@ -345,4 +345,56 @@ div.call-to-action {
 	border-radius: 3px;
 }
 
+.teaser {
+	text-align: center;
+	a {
+		color: #1fc08e;
+		&:hover {
+			color: #5d819d;
+		}
+	}
+}
+
+.documentation {
+	h1 {
+		padding-top: 100px;
+		margin-bottom: 50px;
+		@media #{$large-up} {
+			padding-top: 0px;
+		} 
+	}
+	.section {
+		padding: 0;
+		margin-bottom: 50px;
+	}
+	.code-wrap {
+		margin-bottom: 30px;
+	}
+	.sub-section {
+		margin-bottom: 30px;
+		.code-wrap {
+			margin-bottom: 10px;
+		}
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.nav-documentation {
+	display: none;
+	@media #{$large-up} {
+		display: block;
+		position: fixed;
+	} 
+}
+
+.code-wrap {
+	pre {
+		word-wrap: initial;
+		@media #{$large-up} {
+			word-wrap: break-word;
+		} 
+	}
+}
 
