@@ -1,0 +1,35 @@
+/************
+## Toggler ##
+************/
+
+$toggler-color: lighten(#374c5d, 20%);
+$toggler-checked-color: #1fc08e;
+$toggler-focus-color: #1fc08e;
+
+/***********
+## Drawer ##
+***********/
+
+$drawer-bgcolor: #00ab66;
+
+// For 'left' and 'right' positioned drawers.
+$drawer-width-small: 100%;
+$drawer-width-medium: 300px;
+$drawer-width-large: 300px;
+
+// For 'top' positioned drawers.
+$drawer-height-small: 100%;
+$drawer-height-medium: 100%;
+$drawer-height-large: 100px;
+
+/***********
+## Pusher ##
+***********/
+
+$pusher-bgcolor: #fff;
+
+/*******************
+## Pusher Overlay ##
+*******************/
+
+$overlay-bgcolor: rgba(0,0,0,0.4);
