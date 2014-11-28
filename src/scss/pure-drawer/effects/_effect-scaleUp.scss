@@ -1,33 +1,37 @@
 /*************************
-## Effect 6 - Scale Up ##
+## Effect - Scale Up ##
 *************************/
 
-@mixin effect-6() {
+@mixin effect-scaleUp() {
 	/* CONTAINER */
 
-	[data-effect='pure-effect-6'] {
+	[data-effect='pure-effect-scaleUp'] {
 		-webkit-perspective: 1500px;
 		perspective: 1500px;
 	}
 
-	[data-effect='pure-effect-6'][data-position='left'] {
+	[data-effect='pure-effect-scaleUp'][data-position='left'] {
 		-webkit-perspective-origin: 0% 50%;
 		perspective-origin: 0% 50%;
 	}
 
-	[data-effect='pure-effect-6'][data-position='right'] {
+	[data-effect='pure-effect-scaleUp'][data-position='right'] {
 		-webkit-perspective-origin: 50% 50%;
 		perspective-origin: 50% 50%;
 	}
 
-	[data-effect='pure-effect-6'][data-position='top'] {
+	[data-effect='pure-effect-scaleUp'][data-position='top'] {
 		-webkit-perspective-origin: 50% 0;
 		perspective-origin: 50% 0;
 	}
 
 	/* DRAWER */
+	
+	[data-effect='pure-effect-scaleUp'] .pure-drawer {	
+		transition-duration: $pure-drawer-animation-duration-scaleUp;
+	}
 
-	[data-effect='pure-effect-6'] .pure-drawer[data-position='left'] {
+	[data-effect='pure-effect-scaleUp'] .pure-drawer[data-position='left'] {
 	    -webkit-transform: translate3d(0, 0, -$drawer-width-small);
 		transform: translate3d(0, 0, -$drawer-width-small);
 		@media #{$medium-up} {
@@ -40,7 +44,7 @@
 		}
 	}
 
-	[data-effect='pure-effect-6'] .pure-drawer[data-position='right'] {
+	[data-effect='pure-effect-scaleUp'] .pure-drawer[data-position='right'] {
 		-webkit-transform: translate3d($drawer-width-small, 0, -$drawer-width-small);
 		transform: translate3d($drawer-width-small, 0, -$drawer-width-small);
 		@media #{$medium-up} {
@@ -53,7 +57,7 @@
 		}
 	}
 
-	[data-effect='pure-effect-6'] .pure-drawer[data-position='top'] {
+	[data-effect='pure-effect-scaleUp'] .pure-drawer[data-position='top'] {
 		-webkit-transform: translate3d(0, 0, -$drawer-height-small);
 		transform: translate3d(0, 0, -$drawer-height-small);
 		@media #{$medium-up} {
@@ -66,17 +70,21 @@
 		}
 	}
 
-	[data-effect='pure-effect-6'] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'],
-	[data-effect='pure-effect-6'] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'],
-	[data-effect='pure-effect-6'] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
+	[data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'],
+	[data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'],
+	[data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
 		visibility: visible;
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
 
 	/* PUSHER */
+	
+	[data-effect='pure-effect-scaleUp'] .pure-pusher-container .pure-pusher {
+		transition-duration: $pure-drawer-animation-duration-scaleUp;
+	}
 
-	[data-effect='pure-effect-6'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
+	[data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='left']:checked ~ .pure-pusher-container .pure-pusher {
 		-webkit-transform: translate3d($drawer-width-small, 0, 0);
 		transform: translate3d($drawer-width-small, 0, 0);
 	    @media #{$medium-up} {
@@ -89,7 +97,7 @@
 		}
 	}
 
-	[data-effect='pure-effect-6'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
+	[data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='right']:checked ~ .pure-pusher-container .pure-pusher {
 		-webkit-transform: translate3d(-$drawer-width-small, 0, 0);
 		transform: translate3d(-$drawer-width-small, 0, 0);
 		@media #{$medium-up} {
@@ -102,7 +110,7 @@
 		}
 	}
 
-	[data-effect='pure-effect-6'] .pure-toggle[data-toggle='top']:checked ~ .pure-pusher-container .pure-pusher {
+	[data-effect='pure-effect-scaleUp'] .pure-toggle[data-toggle='top']:checked ~ .pure-pusher-container .pure-pusher {
 		-webkit-transform: translate3d(0, $drawer-height-small, 0);
 		transform: translate3d(0, $drawer-height-small, 0);
 		@media #{$medium-up} {
@@ -114,12 +122,19 @@
 			transform: translate3d(0, $drawer-height-large, 0);
 		}
 	}
+
+	/* OVERLAY */
+
+	[data-effect='pure-effect-scaleUp'] .pure-overlay {
+		transition-duration: $pure-drawer-animation-duration-scaleUp;
+		transition-delay: $pure-drawer-animation-duration-scaleUp / 2;	
+	}
 }
 
 @if($show-drawer == 'all') {
-	@include effect-6;
+	@include effect-scaleUp;
 } @else {
 	@media #{$show-drawer} {
-		@include effect-6;
+		@include effect-scaleUp;
 	}	
 }

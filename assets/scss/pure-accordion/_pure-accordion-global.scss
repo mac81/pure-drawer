@@ -1,0 +1,88 @@
+/**************
+## Container ##
+**************/
+
+.pure-accordion-container {   
+    widows: 100%;  
+    overflow:hidden;   
+  
+    background-color: $container-bg;
+    border-style: $container-border-style;
+    border-width: $container-border-width;
+    border-color: $container-border-color;
+}  
+
+/************
+## Section ##
+************/
+
+.pure-accordion-section{  
+    overflow:hidden;   
+} 
+
+/************
+## Trigger ##
+************/
+
+// Hide checkbox and radio
+.pure-accordion-toggle {
+    display: none;
+}
+
+// anchors + label for checkbox & radio
+.pure-accordion-trigger {
+    display: block;
+    background-color: $trigger-bg;
+    padding: 20px;
+    color: #fff;
+    font-size: rem-calc(18);
+    cursor:pointer; 
+    border-bottom: 1px solid darken(#374c5d, 5%);
+    
+    &:hover {
+        color: #fff;
+        background-color: lighten(#374c5d, 5%);
+    }
+    &:after {
+        content: "+";
+        float: right;
+    }
+} 
+
+.pure-accordion-section:target .pure-accordion-trigger {
+    background-color: lighten(#374c5d, 5%);
+    &:after {
+        content: "";
+    }
+}
+
+/**********************
+## Content Container ##
+**********************/
+
+.pure-accordion-content {   
+    max-height: 0;  
+    transition: all 500ms ease-in-out; 
+}
+
+.pure-accordion-section:target .pure-accordion-content,
+.pure-accordion-toggle:checked ~ .pure-accordion-content {  
+    max-height: 1600px;  
+}
+
+/****************************
+## Content Inner Container ##
+****************************/
+
+.pure-accordion-inner-content {
+    padding: 20px;
+    transition: all 500ms ease-in-out; 
+    opacity: 0;
+}
+
+.pure-accordion-section:target .pure-accordion-inner-content,
+.pure-accordion-toggle:checked ~ .pure-accordion-inner-content  {
+    opacity: 1;
+}
+
+ 

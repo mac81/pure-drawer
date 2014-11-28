@@ -38,6 +38,25 @@ var app = (function() {
 
 			$('.nav-position li:first-child input[name="position"]').trigger('click');
 			
+			$('select#pure-effect').on('change', function(e) {
+				e.preventDefault();
+				var effect = $(this).val(),
+					position = $('input[name="position"]:checked').val();
+
+				$('.pure-container').attr('data-effect', effect);
+				if(!$('input[name="target"]').length) {
+					$('.pure-overlay').attr('data-overlay', position);
+					$('.pure-overlay').attr('for', 'pure-toggle-' + position);
+				} 
+
+				setTimeout(function(){
+					if(!$('input[name="target"]').length) {
+						$('.pure-toggle-label[data-toggle-label="' + position + '"]').trigger('click');
+					} else {
+						$('.pure-toggle-label[data-toggle-label="' + target + '"]').trigger('click');
+					}
+				}, 500);
+			});
 
 			$('.button[data-effect]').not('.disabled').on('click', function(e) {
 				e.preventDefault();

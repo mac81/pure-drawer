@@ -25,9 +25,11 @@
 				<h3>Single Drawer</h3>	
 				<div class="code-wrap">
 <pre>
-<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-1"&gt;
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-slide"&gt;
     &lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
-    &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;+&lt;/label&gt; 
+    &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;
+        &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+    &lt;/label&gt; 
 
     &lt;div class="pure-drawer" data-position="left"&gt;
         Put your off canvas content here
@@ -51,9 +53,17 @@
     &lt;input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"&gt;
     &lt;input type="checkbox" id="pure-toggle-top" class="pure-toggle" data-toggle="top"&gt;
     
-    &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;+&lt;/label&gt; 
-    &lt;label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"&gt;+&lt;/label&gt; 
-    &lt;label class="pure-toggle-label" for="pure-toggle-top" data-toggle-label="top"&gt;+&lt;/label&gt; 
+    &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;
+        &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"&gt;
+        &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+    &lt;/label&gt; 
+
+    &lt;label class="pure-toggle-label" for="pure-toggle-top" data-toggle-label="top"&gt;
+        &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+    &lt;/label&gt; 
 
     &lt;div class="pure-drawer" data-position="left"&gt;
         Put your off canvas content for the left drawer here
@@ -86,10 +96,11 @@
 					<h4>Container</h4>
 					<div class="code-wrap">
 <pre>
-<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-1"&gt;</code>
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-slide"&gt;</code>
 </pre>
 					</div>
-					<p><strong>data-effect:</strong> This is where you enter your desired effect. Ranges from 1-9.</p>
+					<p><strong>data-effect:</strong> This is where you enter your desired effect.</p> 
+					<p>Choose between: slide, reveal, slideAlong, reverseSlide, scaleDown, scaleUp, scaleRotate, fall, push, bounce, fade, flipX, flipY and zoom.</p>
 				</div>
 				
 				<div class="sub-section">
@@ -107,11 +118,14 @@
 					<div class="code-wrap">
 <pre>
 <code class="language-markup">&lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
-&lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;+&lt;/label&gt;</code>
+&lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;
+    &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+&lt;/label&gt;</code>
 </pre>
 					</div>
 					<p><strong>data-toggle:</strong>Used to target the the toggle in css. Must match the value of data-position.</p>
 					<p><strong>data-toggle-label:</strong>Used to target the the toggle label in css. Must match the value of data-toggle.</p>
+					<p><strong>pure-toggle-icon:</strong>This controlls the hamburger icon graphics and animation. If you want to use your own custom icon just remove this span</p>
 				</div>
 
 				<div class="sub-section">

@@ -4,13 +4,21 @@
 @import "pure-drawer/pure-drawer-breakpoints";
 @import "pure-drawer/pure-drawer-settings";
 @import "pure-drawer/pure-drawer-global";
-@import "pure-drawer/effects/effect-1";
-@import "pure-drawer/effects/effect-2";
-@import "pure-drawer/effects/effect-3";
-@import "pure-drawer/effects/effect-4";
-@import "pure-drawer/effects/effect-5";
-@import "pure-drawer/effects/effect-6";
-@import "pure-drawer/effects/effect-7";
-@import "pure-drawer/effects/effect-8";
-@import "pure-drawer/effects/effect-9";
+
+@import "pure-drawer/effects/effect-slide";
+@import "pure-drawer/effects/effect-reveal";
+@import "pure-drawer/effects/effect-slideAlong";
+@import "pure-drawer/effects/effect-reverseSlide";
+@import "pure-drawer/effects/effect-scaleDown";
+@import "pure-drawer/effects/effect-scaleUp";
+@import "pure-drawer/effects/effect-scaleRotate";
+@import "pure-drawer/effects/effect-fall";
+@import "pure-drawer/effects/effect-push";
+@import "pure-drawer/effects/effect-bounce";
+@import "pure-drawer/effects/effect-fade";
+@import "pure-drawer/effects/effect-flipX";
+@import "pure-drawer/effects/effect-flipY";
+@import "pure-drawer/effects/effect-zoom";
+
+@import "pure-drawer/vendor/animate";
 

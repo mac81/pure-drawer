@@ -2,7 +2,7 @@
   "convertHtml": {
     "relativePaths": true
   },
-  "debug": true,
+  "debug": false,
   "domain": null,
   "lintScripts": false,
   "modelSource": null,
@@ -15,8 +15,10 @@
   "projectName": "pure-drawer",
   "publishedId": null,
   "sass": {
-    "sourceMap": true,
-    "useLibSass": true
+    "sourceMap": false,
+    "useLibSass": true,
+    "lineNumbers": false,
+    "debugInfo": false
   },
   "serverHostname": null,
   "serverPort": null,

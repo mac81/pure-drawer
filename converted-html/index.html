@@ -26,9 +26,9 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="pure-container" data-effect="pure-effect-1">
+        <div class="pure-container" data-effect="pure-effect-reveal">
             <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
-            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left">+</label>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
 
             <nav class="pure-drawer" data-position="left">
                 <div class="row collapse">
@@ -46,7 +46,7 @@
             <div class="pure-pusher-container">
                 <div class="pure-pusher">
                     
-	<div class="beta">This site is currently in beta. Errors in functionality, design and content may occur.<span class="icon-cross"></span></div>
+	<!--<div class="beta">This site is currently in beta. Errors in functionality, design and content may occur.<span class="icon-cross"></span></div>-->
 	<header class="header" data-stellar-background-ratio="0.5">
 		<div class="color-overlay">
 			<div class="row">
@@ -57,16 +57,16 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="large-6 columns">
+				<div class="large-8 large-centered center-text columns">
 					<h1 class="header-title">Pure CSS transition effects for off-canvas views</h1>
 					<p class="intro">You have probably all seen the "drawer menu/off-canvas" navigation style made popular by Facebook a few years back. There are a lot of great javascript plugins that offers this functionality, but I thought it would be cool to try and do this with the new cool features of css. No javascript required.</p>
 					<a href="#demo" data-scroll-goto="0" class="icon-browser button">Demo</a>
-					<a href="https://github.com/mac81/pure-drawer/archive/master.zip" class="icon-download button"><span>Download v0.8</span></a>
+					<a href="https://github.com/mac81/pure-drawer/archive/master.zip" class="icon-download button"><span>Download v1.0</span></a>
 					<a href="documentation.html" class="icon-book button"><span>Documentation</span></a>
 				</div>
-				<div class="large-6 columns">
+				<!--<div class="large-6 columns">
 					<img class="header-image" src="assets/gfx/iphone-new.png" alt=""/>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</header>
@@ -93,16 +93,27 @@
 				</div>
 				<div class="drawer-effect">
 					<h4 class="section-subtitle"><span>Choose effect:</span></h4>
+					<!--<select name="pure-effect" id="pure-effect">
+						<option value="pure-effect-slide">Slide in on top</option>
+						<option value="pure-effect-reveal">Reveal</option>
+						<option value="pure-effect-slideAlong">Slide along</option>
+						<option value="pure-effect-reverseSlide">Reverse slide out</option>
+					</select>-->
 					<ul>
-						<li><a href="#" class="button active alternate" data-effect="pure-effect-1">Slide in on top</a></li>
-						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-2">Reveal</a></li>
-						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-3">Slide along</a></li>
-						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-4">Reverse slide out</a></li>
-						<li><a href="#" class="button alternate" data-effect="pure-effect-5">Scale Down Pusher</a></li>
-						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-6">Scale Up</a></li>
-						<li><a href="#" class="button alternate" data-effect="pure-effect-7">Scale and Rotate Pusher</a></li>
-						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-8">Fall Down</a></li>
-						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-9">Push</a></li>
+						<li><a href="#" class="button active alternate" data-effect="pure-effect-slide">Slide in on top</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-reveal">Reveal</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-slideAlong">Slide along</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-reverseSlide">Reverse slide out</a></li>
+						<li><a href="#" class="button alternate" data-effect="pure-effect-scaleDown">Scale Down Pusher</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-scaleUp">Scale Up</a></li>
+						<li><a href="#" class="button alternate" data-effect="pure-effect-scaleRotate">Scale and Rotate Pusher</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-fall">Fall In</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-push">Push</a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-bounce">Bounce <strong>(New)</strong></a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-fade">Fade <strong>(New)</strong></a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-flipX">FlipX <strong>(New)</strong></a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-flipY">FlipY <strong>(New)</strong></a></li>
+						<li><a href="#" class="button no-top alternate" data-effect="pure-effect-zoom">Zoom <strong>(New)</strong></a></li>
 					</ul>
 				</div>
 			</div>
@@ -122,7 +133,7 @@
 				<ul>
 					<li class="effects">
 						<h5>Cool Effects</h5>
-						<p>Choose between 9 different effects</p>
+						<p>Choose between 14 different effects</p>
 					</li>
 					<li class="position">
 						<h5>Drawer Position</h5>
@@ -130,7 +141,7 @@
 					</li>
 					<li class="responsive">
 						<h5>Responsive Design</h5>
-						<p>Pure Drawer comes with three premade breakpoints. Create different drawer layouts for small, medium and large screens.</p>
+						<p>Pure Drawer comes with three premade breakpoints. Create different drawer layouts for small, medium and large screens. And choose whether or not to use pure-drawer at all at specific breakpoints.</p>
 					</li>
 					<li></li>
 				</ul>

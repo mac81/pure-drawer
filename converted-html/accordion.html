@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Title block allowing child pages to override -->
+        <title>Pure Drawer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1 minimal-ui">
+        <meta property="og:image" content="assets/gfx/iphone-new.png"/>
+        <meta property="og:site_name" content="Pure Drawer"/>
+        <meta property="og:title" content="Pure CSS transition effects for off-canvas views"/>
+        
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+        <!-- Styles -->
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <!-- Style block allowing child pages to inject their own styles -->
+        
+        <script src="assets/js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="pure-container" data-effect="pure-effect-reveal">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+
+            <nav class="pure-drawer" data-position="left">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="documentation.html">Documentation</a></li>
+                            <li><a href="multiple.html">Demo Multiple Drawers</a></li>
+                            <li><a href="features.html">Planned Features</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>   
+            
+            <div class="pure-pusher-container">
+                <div class="pure-pusher">
+                    
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="pure-accordion-container">  
+		    	<section id="section-1" class="pure-accordion-section"> 
+	    			<a href="#section-1" class="pure-accordion-trigger">Section 1</a>
+	    			<!--<input type="checkbox" id="section-1" class="pure-accordion-toggle"/>-->
+	    			<!--<input type="radio" name="pure-accordion-group" id="section-1" class="pure-accordion-toggle"/>
+	    			<label for="section-1" class="pure-accordion-trigger">Test</label>-->
+		    		
+		    		<div class="pure-accordion-content">
+		    			<div class="pure-accordion-inner-content">
+		    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>  
+		    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>  
+		    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>  
+		    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>  
+		    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>  
+		    			</div>
+		    		</div> 
+				</section>   
+		  
+		    	<section id="section-2" class="pure-accordion-section">  
+	    			<a href="#section-2" class="pure-accordion-trigger">Section 2</a>
+	    			<!--<input type="checkbox" id="section-2" class="pure-accordion-toggle"/>
+	    			<input type="radio" name="pure-accordion-group" id="section-2" class="pure-accordion-toggle"/>
+	    			<label for="section-2" class="pure-accordion-trigger">Test</label>-->
+		    		<div class="pure-accordion-content">
+		    			<div class="pure-accordion-inner-content">
+		    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>  
+		    			</div>
+		    			
+		    		</div> 
+				</section>  
+				<section id="section-3" class="pure-accordion-section">  
+	    			<a href="#section-3" class="pure-accordion-trigger">Section 3</a>
+	    			<!--<input type="checkbox" id="section-3" class="pure-accordion-toggle"/>
+	    			<input type="radio" name="pure-accordion-group" id="section-3" class="pure-accordion-toggle"/>
+	    			<label for="section-3" class="pure-accordion-trigger">Test</label>-->
+		    		<div class="pure-accordion-content">
+		    			<div class="pure-accordion-inner-content">
+		    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id lobortis massa. Nunc viverra velit leo, sit amet elementum mi. Fusce posuere nunc a mi tempus malesuada. Curabitur facilisis rhoncus eros eget placerat. Aliquam semper mauris sit amet justo tempor nec lacinia magna molestie. Etiam placerat congue dolor vitae adipiscing. Aliquam ac erat lorem, ut iaculis justo. Etiam mattis dignissim gravida. Aliquam nec justo ante, non semper mi. Nulla consectetur interdum massa, vel porta enim vulputate sed. Maecenas elit quam, egestas eget placerat non, fringilla vel eros. Nam vehicula elementum nulla sed consequat. Phasellus eu erat enim. Praesent at magna non massa dapibus scelerisque in eu lorem.</p>  
+		    			</div> 
+		    		</div> 
+				</section>  
+			</div>  
+		</div>
+	</div> 
+
+                </div>
+            </div>
+            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
+        </div>
+
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="assets/js/vendor/prism.min.js"></script>
+        <script src="assets/js/vendor/scrollIt.min.js"></script>
+        <script src="assets/js/vendor/jquery.scrollTo.min.js"></script>
+        <script src="assets/js/vendor/jquery.localScroll.min.js"></script>
+        <script src="assets/js/vendor/smoothscroll.min.js"></script>
+        <script src="assets/js/vendor/wow.min.js"></script>
+        <script src="assets/js/vendor/stellar.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "50c49065-144f-4b6c-9e42-57d0ae4318af", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-53442203-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+</html>
+

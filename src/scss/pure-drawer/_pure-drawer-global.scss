@@ -1,4 +1,52 @@
+/**************
+## Variables ##
+**************/
+
 $show-drawer: 'all' !default;
+
+$pure-drawer-animation-duration: 500ms !default;
+$pure-drawer-animation-duration-slide: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-reveal: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-slideAlong: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-reverseSlide: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-scaleDown: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-scaleUp: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-scaleRotate: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-fall: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-push: $pure-drawer-animation-duration !default;
+$pure-drawer-animation-duration-bounce: 1000ms !default;
+$pure-drawer-animation-duration-fade: 1000ms !default;
+$pure-drawer-animation-duration-flipX: 1000ms !default;
+$pure-drawer-animation-duration-flipY: 1000ms !default;
+$pure-drawer-animation-duration-zoom: 1000ms !default;
+
+$toggler-color: lighten(#374c5d, 20%) !default;
+$toggler-checked-color: #1fc08e !default;
+$toggler-focus-color: #1fc08e !default;
+
+$drawer-bgcolor: #374c5d !default;
+
+// For 'left' and 'right' positioned drawers.
+$drawer-width-small: 100% !default;
+$drawer-width-medium: 300px !default;
+$drawer-width-large: 300px !default;
+
+// For 'top' positioned drawers.
+$drawer-height-small: 100% !default;
+$drawer-height-medium: 100% !default;
+$drawer-height-large: 100px !default;
+
+$pusher-bgcolor: #fff !default;
+
+$overlay-bgcolor: rgba(0,0,0,0.4) !default;
+
+/*************
+## Required ##
+*************/
+
+html, body {
+	height: 100%;
+}
 
 /**************
 ## Container ##
@@ -31,12 +79,8 @@ $show-drawer: 'all' !default;
     top: 15px;
     z-index: 99;
     color: $toggler-color;
-    font-size: rem-calc(70);
-    width: 56px;
-	height: 56px;
-    line-height: 44px;
-    text-align: center;
-    font-weight: 300;
+    width: 70px;
+	height: 70px;
     transition: all 400ms ease-in-out;  
     border: 2px solid $toggler-color;
     border-radius: 50%;
@@ -49,10 +93,38 @@ $show-drawer: 'all' !default;
     &:hover {
     	border-color: $toggler-focus-color;
     	color: $toggler-focus-color;
+    	.pure-toggle-icon,
+    	.pure-toggle-icon:before,
+    	.pure-toggle-icon:after {
+    		background-color: $toggler-focus-color;
+    	}
     }
     &:active {
     	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
+    .pure-toggle-icon, 
+    .pure-toggle-icon:before, 
+    .pure-toggle-icon:after {
+    	position: absolute;
+    	top: 50%;
+  		left: 50%;
+  		height: 4px;
+  		width: 35px;
+  		cursor: pointer;
+  		background: $toggler-color;;
+  		display: block;
+  		content: '';
+  		transition: all 500ms ease-in-out;
+	}
+	.pure-toggle-icon {
+  		transform: translate3d(-50%, -4px, 0);
+	}
+	.pure-toggle-icon:before {
+  		transform: translate3d(-50%, -14px, 0);
+	}
+	.pure-toggle-icon:after {
+  		transform: translate3d(-50%, 10px, 0);
+	}
 }
 
 .pure-toggle-label {
@@ -89,21 +161,24 @@ $show-drawer: 'all' !default;
 	z-index: -1;
 }
 
-.pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] {
-	-webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
-	transform: translate3d(0, 0, 0) rotate(-45deg);
+.pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'],
+.pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'],
+.pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top']  {
 	border-color: $toggler-checked-color;
 	color: $toggler-checked-color;
-}
-
-.pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] {
-	-webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
-
-.pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] {
-	-webkit-transform: rotate(-45deg) translate3d(-20px, -20px, 0);
-	transform: rotate(-45deg) translate3d(-20px, -20px, 0);
+	.pure-toggle-icon {
+	  	background-color: transparent;
+	}
+	.pure-toggle-icon:before, .pure-toggle-icon:after {
+	  	top: 0;
+	}
+	.pure-toggle-icon:before {
+	  	transform: translateX(-50%) rotate(45deg);
+	}
+	.pure-toggle-icon:after {
+	  	transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+	  	top: 10px;
+	}
 }
 
 /***********
@@ -116,10 +191,13 @@ $show-drawer: 'all' !default;
 	left: 0;
 	z-index: 1;
 	height: 100%;
-	background-color: $drawer-bgcolor;
-	-webkit-transition: all 0.5s;
-	transition: all 0.5s;
 	visibility: hidden;
+	background-color: $drawer-bgcolor;
+
+	transition-property: all;
+	transition-duration: $pure-drawer-animation-duration;
+	transition-timing-function: ease-out;
+
 	width: $drawer-width-small;
 	@media #{$medium-up} { width: $drawer-width-medium; }
 	@media #{$large-up} { width: $drawer-width-large; }
@@ -167,9 +245,11 @@ $show-drawer: 'all' !default;
 	overflow-y: auto;
 	left: 0;
 	z-index: 2;
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
 	background-color: $pusher-bgcolor;
+	
+	transition-property: transform;
+	transition-duration: $pure-drawer-animation-duration;
+	transition-timing-function: ease-out;
 }
 
 /*******************
@@ -185,8 +265,11 @@ $show-drawer: 'all' !default;
 	height: 0;
 	opacity: 0;
 	background-color: $overlay-bgcolor;
-	-webkit-transition: opacity 0.5s 0.3s;
-	transition: opacity 0.5s 0.3s;
+	
+	transition-property: opacity;
+	transition-duration: $pure-drawer-animation-duration;
+	transition-delay: $pure-drawer-animation-duration;
+	transition-timing-function: ease-in-out;
 }
 
 .pure-overlay {
@@ -224,8 +307,6 @@ $show-drawer: 'all' !default;
 	height: 100%;
 	opacity: 1;
 	z-index: 2;
-	-webkit-transition: opacity 0.5s 0.3s;
-	transition: opacity 0.5s 0.3s;
 }
 
 /********************************
