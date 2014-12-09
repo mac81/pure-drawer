@@ -1,21 +1,3 @@
-/****************
-## Pure Drawer ##
-****************/
-/**************
-## Animation ##
-**************/
-/************
-## Toggler ##
-************/
-/***********
-## Drawer ##
-***********/
-/***********
-## Pusher ##
-***********/
-/*******************
-## Pusher Overlay ##
-*******************/
 /**************
 ## Variables ##
 **************/
@@ -82,11 +64,14 @@ html, body {
     content: '';
     transition: all 500ms ease-in-out; }
   .pure-toggle-label .pure-toggle-icon {
-    transform: translate3d(-50%, -4px, 0); }
+    transform: translate3d(-50%, -4px, 0);
+    -webkit-transform: translate3d(-50%, -4px, 0); }
   .pure-toggle-label .pure-toggle-icon:before {
-    transform: translate3d(-50%, -14px, 0); }
+    transform: translate3d(-50%, -14px, 0);
+    -webkit-transform: translate3d(-50%, -14px, 0); }
   .pure-toggle-label .pure-toggle-icon:after {
-    transform: translate3d(-50%, 10px, 0); }
+    transform: translate3d(-50%, 10px, 0);
+    -webkit-transform: translate3d(-50%, 10px, 0); }
 
 .pure-toggle-label[data-toggle-label='left'] {
   left: 15px;
@@ -113,9 +98,11 @@ html, body {
   .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:before, .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:after, .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:before, .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:after, .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:before, .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:after {
     top: 0; }
   .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:before, .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:before, .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:before {
-    transform: translateX(-50%) rotate(45deg); }
+    transform: translateX(-50%) rotate(45deg);
+    -webkit-transform: translateX(-50%) rotate(45deg); }
   .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:after, .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:after, .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:after {
     transform: translateX(-50%) translateY(-10px) rotate(-45deg);
+    -webkit-transform: translateX(-50%) translateY(-10px) rotate(-45deg);
     top: 10px; }
 
 /***********

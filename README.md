@@ -1,6 +1,6 @@
 # Pure Drawer
 
-Version: 1.0
+Version: 1.0.1
 
 Pure Drawer is a 100% css solution for off-canvas drawers.
 
@@ -23,6 +23,10 @@ http://mac81.github.io/pure-drawer/documentation
  - More effects (Implemented in version 1.0)
 
 ## Changelog
+
+**1.0.1** :: *9th Dec 2014*
+
+- Fixed issue with toggle button in Safari and IOS.
 
 **1.0** :: *28th Nov 2014*
 
