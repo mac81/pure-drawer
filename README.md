@@ -1,6 +1,6 @@
 # Pure Drawer
 
-Version: 1.0.1
+Version: 1.0.2
 
 Pure Drawer is a 100% css solution for off-canvas drawers.
 
@@ -23,6 +23,10 @@ http://mac81.github.io/pure-drawer/documentation
  - More effects (Implemented in version 1.0)
 
 ## Changelog
+
+**1.0.2** :: *27th Jul 2015*
+
+- Fixed scrollbar placement when drawer is on the right side.
 
 **1.0.1** :: *9th Dec 2014*
 

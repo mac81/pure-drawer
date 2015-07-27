@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Title block allowing child pages to override -->
+        <title>Pure Drawer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1 minimal-ui">
+        <meta property="og:image" content="src/gfx/iphone-new.png"/>
+        <meta property="og:site_name" content="Pure Drawer"/>
+        <meta property="og:title" content="Pure CSS transition effects for off-canvas views"/>
+        
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <!-- Styles -->
+        <link rel="stylesheet" href="src/css/app.css">
+
+        <script src="src/js/vendor/modernizr-2.6.2.min.js"/>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="pure-container" data-effect="pure-effect-reveal">
+           <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"/>
+            <input type="checkbox" id="pure-toggle-top" class="pure-toggle" data-toggle="top"/>
+            
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+            <label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"><span class="pure-toggle-icon"></span></label> 
+            <label class="pure-toggle-label" for="pure-toggle-top" data-toggle-label="top"><span class="pure-toggle-icon"></span></label>  
+
+            <nav class="pure-drawer" data-position="left">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/documentation">Documentation</a></li>
+                            <li><a href="/features">Planned Features</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="pure-drawer" data-position="right">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/documentation">Documentation</a></li>
+                            <li><a href="/features">Planned Features</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>
+
+            <nav class="pure-drawer" data-position="top">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/documentation">Documentation</a></li>
+                            <li><a href="/features">Planned Features</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>    
+            
+            <div class="pure-pusher-container">
+                <div class="pure-pusher">
+                     <section class="demo section section-multiple" data-scroll-index="0" id="demo">
+        <div class="row">
+            <div class="large-12 columns">
+                <h3 class="section-title">Try out the new multiple drawers!</h3>
+                <div class="drawer-position">
+                    <h4 class="section-subtitle"><span>Choose target drawer:</span></h4>
+                    <ul>
+                        <li>
+                            <input type="radio" id="left" name="target" value="left" checked="checked"/>
+                            <label for="left" class="">Left</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="top" name="target" value="top"/>
+                            <label for="top" class="">Top</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="right" name="target" value="right"/>
+                            <label for="right" class="">Right</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="drawer-effect">
+                    <h4 class="section-subtitle"><span>Choose effect:</span></h4>
+                    <ul>
+                        <li><a href="#" class="button active alternate" data-effect="pure-effect-slide">Slide in on top</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-reveal">Reveal</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-slideAlong">Slide along</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-reverseSlide">Reverse slide out</a></li>
+                        <li><a href="#" class="button alternate" data-effect="pure-effect-scaleDown">Scale Down Pusher</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-scaleUp">Scale Up</a></li>
+                        <li><a href="#" class="button alternate" data-effect="pure-effect-scaleRotate">Scale and Rotate Pusher</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-fall">Fall In</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-push">Push</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-bounce">Bounce <strong>(New)</strong></a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-fade">Fade <strong>(New)</strong></a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-flipX">FlipX <strong>(New)</strong></a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-flipY">FlipY <strong>(New)</strong></a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-zoom">Zoom <strong>(New)</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+                </div> 
+            </div>
+            
+            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
+            <label class="pure-overlay" for="pure-toggle-right" data-overlay="right"></label>
+            <label class="pure-overlay" for="pure-toggle-top" data-overlay="top"></label>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="src/js/vendor/prism.js"></script>
+        <script src="src/js/vendor/scrollIt.js"></script>
+        <script src="src/js/vendor/jquery.scrollTo.js"></script>
+        <script src="src/js/vendor/jquery.localScroll.js"></script>
+        <script src="src/js/vendor/smoothscroll.js"></script>
+        <script src="src/js/vendor/wow.js"></script>
+        <script src="src/js/vendor/stellar.js"></script>
+        <script src="src/js/app.js"></script>
+
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "50c49065-144f-4b6c-9e42-57d0ae4318af", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-53442203-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
