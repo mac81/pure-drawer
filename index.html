@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Title block allowing child pages to override -->
+        <title>Pure Drawer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1 minimal-ui">
+        <meta property="og:image" content="src/gfx/iphone-new.png"/>
+        <meta property="og:site_name" content="Pure Drawer"/>
+        <meta property="og:title" content="Pure CSS transition effects for off-canvas views"/>
+        
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <!-- Styles -->
+        <link rel="stylesheet" href="src/css/app.css">
+
+        <script src="src/js/vendor/modernizr-2.6.2.min.js"/>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="pure-container" data-effect="pure-effect-reveal">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+
+            <nav class="pure-drawer" data-position="left">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/documentation.html">Documentation</a></li>
+                            <li><a href="/multiple.html">Demo Multiple Drawers</a></li>
+                            <li><a href="/features">Planned Features</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>   
+            
+            <div class="pure-pusher-container">
+                <div class="pure-pusher">
+                    
+    <!--<div class="beta">This site is currently in beta. Errors in functionality, design and content may occur.<span class="icon-cross"></span></div>-->
+    <header class="header" data-stellar-background-ratio="0.5">
+        <div class="color-overlay">
+            <div class="row">
+                <div class="large-2 large-centered columns">
+                    <div class="logo">
+                        <img src="src/gfx/logo.png" alt="Pure Drawer"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="large-8 large-centered center-text columns">
+                    <h1 class="header-title">Pure CSS transition effects for off-canvas views</h1>
+                    <p class="intro">You have probably all seen the "drawer menu/off-canvas" navigation style made popular by Facebook a few years back. There are a lot of great javascript plugins that offers this functionality, but I thought it would be cool to try and do this with the new cool features of css. No javascript required.</p>
+                    <a href="#demo" data-scroll-goto="0" class="icon-browser button">Demo</a>
+                    <a href="https://github.com/mac81/pure-drawer/archive/master.zip" class="icon-download button"><span>Download v1.0.2</span></a>
+                    <a href="/documentation.html" class="icon-book button"><span>Documentation</span></a>
+                </div>
+                <!--<div class="large-6 columns">
+                    <img class="header-image" src="assets/gfx/iphone-new.png" alt=""/>
+                </div>-->
+            </div>
+        </div>
+    </header>
+    <section class="demo section" data-scroll-index="0" id="demo">
+        <div class="row">
+            <div class="large-12 columns">
+                <h3 class="section-title">Try it out!</h3>
+                <div class="drawer-position">
+                    <h4 class="section-subtitle"><span>Choose position:</span></h4>
+                    <ul>
+                        <li>
+                            <input type="radio" id="left" name="position" value="left" checked="checked"/>
+                            <label for="left" class="">Left</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="top" name="position" value="top"/>
+                            <label for="top" class="">Top</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="right" name="position" value="right"/>
+                            <label for="right" class="">Right</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="drawer-effect">
+                    <h4 class="section-subtitle"><span>Choose effect:</span></h4>
+                    <!--<select name="pure-effect" id="pure-effect">
+                        <option value="pure-effect-slide">Slide in on top</option>
+                        <option value="pure-effect-reveal">Reveal</option>
+                        <option value="pure-effect-slideAlong">Slide along</option>
+                        <option value="pure-effect-reverseSlide">Reverse slide out</option>
+                    </select>-->
+                    <ul>
+                        <li><a href="#" class="button active alternate" data-effect="pure-effect-slide">Slide in on top</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-reveal">Reveal</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-slideAlong">Slide along</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-reverseSlide">Reverse slide out</a></li>
+                        <li><a href="#" class="button alternate" data-effect="pure-effect-scaleDown">Scale Down Pusher</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-scaleUp">Scale Up</a></li>
+                        <li><a href="#" class="button alternate" data-effect="pure-effect-scaleRotate">Scale and Rotate Pusher</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-fall">Fall In</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-push">Push</a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-bounce">Bounce <strong>(New)</strong></a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-fade">Fade <strong>(New)</strong></a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-flipX">FlipX <strong>(New)</strong></a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-flipY">FlipY <strong>(New)</strong></a></li>
+                        <li><a href="#" class="button no-top alternate" data-effect="pure-effect-zoom">Zoom <strong>(New)</strong></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="large-12 columns">
+                <h4 class="section-subtitle"><span>Or you can:</span></h4>
+                <p class="teaser"><a href="/multiple.html">Try out the new multiple drawers</a></p>
+            </div>
+        </div>
+    </section>
+    <section class="features section" id="features">
+        <div class="row">
+            <div class="large-12 columns">
+                <h3 class="section-title">Features</h3>
+                <h4 class="section-subtitle"><span>Pure Drawer comes with a lot of nice features</span></h4>
+            </div>
+            <div class="large-4 columns">
+                <ul>
+                    <li class="effects">
+                        <h5>Cool Effects</h5>
+                        <p>Choose between 14 different effects</p>
+                    </li>
+                    <li class="position">
+                        <h5>Drawer Position</h5>
+                        <p>Choose where you want your drawer to appear</p>
+                    </li>
+                    <li class="responsive">
+                        <h5>Responsive Design</h5>
+                        <p>Pure Drawer comes with three premade breakpoints. Create different drawer layouts for small, medium and large screens. And choose whether or not to use pure-drawer at all at specific breakpoints.</p>
+                    </li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="large-4 columns">
+                <img class="header-image" src="src/gfx/iphone-new.png" alt=""/>
+            </div>
+            <div class="large-4 columns">
+                <ul>
+                    <li class="browsers">
+                        <h5>Cross browser support</h5>
+                        <p>Pure Drawer works in all modern browsers. Gracefully degrades in IE9.</p>
+                    </li>
+                    <li class="multiple-drawers">
+                        <h5>Multiple Drawers</h5>
+                        <p>Need more then one drawer? Pure drawer can have up to three different drawers.</p>
+                    </li>
+                    <li class="nojs">
+                        <h5>No javascript</h5>
+                        <p>Pure Drawer is a 100% css solution. But feel free to enhance the functionality further with some awesome javascript code.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="large-12 columns call-to-action">
+                <a href="/documentation.html" class="icon-book button call-to-action"><span>View Documentation</span></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer section" id="features">
+        <div class="row">
+            <div class="large-12 columns">
+                <span class='st_facebook_large' displayText='Facebook'></span>
+                <span class='st_twitter_large' displayText='Tweet'></span>
+                <span class='st_linkedin_large' displayText='LinkedIn'></span>
+                <span class='st_googleplus_large' displayText='Google +'></span>
+                <span class='st_pinterest_large' displayText='Pinterest'></span>
+                <span class='st_email_large' displayText='Email'></span>
+            </div>
+            <div class="large-12 columns">
+                <p>Developed by <a href="https://www.linkedin.com/profile/view?id=21545731">Thomas Wilthil</a> - Lincensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license</p>
+            </div>
+        </div>
+    </footer>
+
+                </div>
+            </div>
+            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="src/js/vendor/prism.js"></script>
+        <script src="src/js/vendor/scrollIt.js"></script>
+        <script src="src/js/vendor/jquery.scrollTo.js"></script>
+        <script src="src/js/vendor/jquery.localScroll.js"></script>
+        <script src="src/js/vendor/smoothscroll.js"></script>
+        <script src="src/js/vendor/wow.js"></script>
+        <script src="src/js/vendor/stellar.js"></script>
+        <script src="src/js/app.js"></script>
+
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "50c49065-144f-4b6c-9e42-57d0ae4318af", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-53442203-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+

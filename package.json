@@ -1,0 +1,34 @@
+{
+	"name": "PureDrawer",
+	"version": "1.0.1",
+	"description": "Pure CSS transition effects for off-canvas views",
+	"keywords": [
+		"css",
+		"scss",
+		"sass",
+		"mobile-first",
+		"responsive",
+		"front-end",
+		"menu",
+		"web"
+	],
+	"license": {
+		"type": "MIT",
+		"url": "https://github.com/mac81/pure-drawer/blob/master/LICENSE"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/mac81/pure-drawer"
+	},
+	"bugs": "https://github.com/mac81/pure-drawer/issues",
+	"homepage": "http://mac81.github.io/pure-drawer/",
+	"devDependencies": {
+		"gulp": "^3.8.11",
+    	"gulp-autoprefixer": "^2.2.0",
+		"gulp-sass": "^2.0.0",
+		"gulp-csso": "^0.2.9",
+    	"gulp-load-plugins": "~0.5.3",
+    	"gulp-size": "^1.0.0",
+    	"gulp-rename": "^1.2.0"
+	}
+}

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Title block allowing child pages to override -->
+        <title>Pure Drawer</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1 minimal-ui">
+        <meta property="og:image" content="src/gfx/iphone-new.png"/>
+        <meta property="og:site_name" content="Pure Drawer"/>
+        <meta property="og:title" content="Pure CSS transition effects for off-canvas views"/>
+        
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <!-- Styles -->
+        <link rel="stylesheet" href="src/css/app.css">
+
+        <script src="src/js/vendor/modernizr-2.6.2.min.js"/>
+    </head>
+    <body>
+        <!--[if lt IE 9]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="pure-container" data-effect="pure-effect-reveal">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
+
+            <nav class="pure-drawer" data-position="left">
+                <div class="row collapse">
+                    <div class="large-12 columns">
+                        <ul class="nav-primary">
+                            <li><a href="/">Demo</a></li>
+                            <li><a href="#setup">Setup</a></li>
+                            <li><a href="#markup">Markup</a></li>
+                            <li><a href="#scss">SCSS</a></li>
+                            <li><a href="#css">CSS</a></li>
+                            <li><a href="#js">Javascript</a></li>
+                            <li><a href="#browser">Browser support</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </nav>   
+            
+            <div class="pure-pusher-container">
+                <div class="pure-pusher">
+                    <div class="row">
+        <div class="large-12 columns documentation">
+            <h1 class="title">Documentation</h1>
+            
+            <div id="setup" class="section">
+                <h2 class="subtitle">Setup</h2>
+                <p>Head over to <a href="https://github.com/mac81/pure-drawer/tree/master/src">Github</a> and download the scss and/or css files.</p>
+            </div>
+            
+            <div id="markup" class="section">
+                <h2 class="subtitle">Markup</h2>
+                <p>It is important that the markup is in the same order as below due to the use of the css sibling selector. If you add additional containers to your markup you need to update the css accordingly.</p>
+
+                <h3>Single Drawer</h3>  
+                <div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-slide"&gt;
+    &lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
+    &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;
+        &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+    &lt;/label&gt; 
+
+    &lt;div class="pure-drawer" data-position="left"&gt;
+        Put your off canvas content here
+    &lt;/div&gt;  
+    &lt;div class="pure-pusher-container"&gt;
+        &lt;div class="pure-pusher"&gt;
+            Put your site content here
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
+&lt;/div&gt;</code>
+</pre>  
+                </div>
+
+                <h3>Multiple Drawers</h3>
+                <div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-1"&gt;
+
+    &lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
+    &lt;input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"&gt;
+    &lt;input type="checkbox" id="pure-toggle-top" class="pure-toggle" data-toggle="top"&gt;
+    
+    &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;
+        &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+    &lt;/label&gt;
+
+    &lt;label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"&gt;
+        &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+    &lt;/label&gt; 
+
+    &lt;label class="pure-toggle-label" for="pure-toggle-top" data-toggle-label="top"&gt;
+        &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+    &lt;/label&gt; 
+
+    &lt;div class="pure-drawer" data-position="left"&gt;
+        Put your off canvas content for the left drawer here
+    &lt;/div&gt;
+
+    &lt;div class="pure-drawer" data-position="right"&gt;
+        Put your off canvas content for the right drawer here
+    &lt;/div&gt;  
+
+    &lt;div class="pure-drawer" data-position="top"&gt;
+        Put your off canvas content for the top drawer here
+    &lt;/div&gt;  
+
+    &lt;div class="pure-pusher-container"&gt;
+        &lt;div class="pure-pusher"&gt;
+            Put your site content here
+        &lt;/div&gt; 
+    &lt;/div&gt;
+
+    &lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
+    &lt;label class="pure-overlay" for="pure-toggle-right" data-overlay="right"&gt;&lt;/label&gt; 
+    &lt;label class="pure-overlay" for="pure-toggle-top" data-overlay="top"&gt;&lt;/label&gt;
+&lt;/div&gt;</code>
+</pre>  
+                </div>
+
+                <h3 class="doc-title">Attributes</h3>
+
+                <div class="sub-section">
+                    <h4>Container</h4>
+                    <div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-slide"&gt;</code>
+</pre>
+                    </div>
+                    <p><strong>data-effect:</strong> This is where you enter your desired effect.</p> 
+                    <p>Choose between: slide, reveal, slideAlong, reverseSlide, scaleDown, scaleUp, scaleRotate, fall, push, bounce, fade, flipX, flipY and zoom.</p>
+                </div>
+                
+                <div class="sub-section">
+                    <h4>Drawer</h4>
+                    <div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;div class="pure-drawer" data-position="left"&gt;</code>
+</pre>
+                    </div>
+                    <p><strong>data-position:</strong>Where you want you off-canvas drawer to appear. Legal values are 'left', 'right' and 'top'.</p>
+                </div>
+
+                <div class="sub-section">
+                    <h4>Toggler</h4>
+                    <div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
+&lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;
+    &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
+&lt;/label&gt;</code>
+</pre>
+                    </div>
+                    <p><strong>data-toggle:</strong>Used to target the the toggle in css. Must match the value of data-position.</p>
+                    <p><strong>data-toggle-label:</strong>Used to target the the toggle label in css. Must match the value of data-toggle.</p>
+                    <p><strong>pure-toggle-icon:</strong>This controlls the hamburger icon graphics and animation. If you want to use your own custom icon just remove this span</p>
+                </div>
+
+                <div class="sub-section">
+                    <h4>Overlay</h4>
+                    <div class="code-wrap">
+<pre>
+<code class="language-markup">&lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt;</code>
+</pre>
+                    </div>
+                    <p><strong>data-overlay:</strong>Used to target the the overlay in css. Must match the value of data-position.</p>
+                </div>
+            </div>
+        
+
+            <div id="scss" class="section">
+                <h2 class="subtitle">SCSS</h2>
+                <h3>Settings</h3>
+                <div class="code-wrap">
+<pre>
+<code class="language-scss">// Point $show-drawer to one of the variables in _pure-drawer-breakpoints.scss to control which breakpoints drawers should appear.
+// $show-drawer: $small-only; 
+
+/**************
+## Animation ##
+**************/
+
+// $pure-drawer-animation-duration-slide: 500ms;
+// $pure-drawer-animation-duration-reveal: 500ms;
+// $pure-drawer-animation-duration-slideAlong: 500ms;
+// $pure-drawer-animation-duration-reverseSlide: 500ms;
+// $pure-drawer-animation-duration-scaleDown: 500ms;
+// $pure-drawer-animation-duration-scaleUp: 500ms;
+// $pure-drawer-animation-duration-scaleRotate: 500ms;
+// $pure-drawer-animation-duration-fall: 500ms;
+// $pure-drawer-animation-duration-push: 500ms;
+// $pure-drawer-animation-duration-bounce: 1000ms;
+// $pure-drawer-animation-duration-fade: 1000ms;
+// $pure-drawer-animation-duration-flipX: 1000ms !default;
+// $pure-drawer-animation-duration-flipY: 1000ms !default;
+// $pure-drawer-animation-duration-zoom: 1000ms !default;
+
+
+/************
+## Toggler ##
+************/
+
+// $toggler-color: lighten(#374c5d, 20%);
+// $toggler-checked-color: #1fc08e;
+// $toggler-focus-color: #1fc08e;
+
+/***********
+## Drawer ##
+***********/
+
+// $drawer-bgcolor: #374c5d;
+
+// For 'left' and 'right' positioned drawers.
+// $drawer-width-small: 100%;
+// $drawer-width-medium: 300px;
+// $drawer-width-large: 300px;
+
+// For 'top' positioned drawers.
+// $drawer-height-small: 100%;
+// $drawer-height-medium: 100%;
+// $drawer-height-large: 100px;
+
+/***********
+## Pusher ##
+***********/
+
+// $pusher-bgcolor: #fff;
+
+/*******************
+## Pusher Overlay ##
+*******************/
+
+// $overlay-bgcolor: rgba(0,0,0,0.4);</code>
+</pre>          
+                </div>
+                <h3 class="doc-title">Breakpoints</h3>
+                <p>Media queries can be easily customized by changing the variable values in _pure-drawer-breakpoints.scss.</p>
+                <div class="code-wrap">
+<pre>
+<code class="language-scss">// Media Query Ranges
+$small-range: (0em, 40em);
+$medium-range: (40.063em, 64em);
+$large-range: (64.063em, 90em);
+
+$screen: "only screen";
+
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
+
+$small-up: $screen;
+$small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
+
+$medium-up: "#{$screen} and (min-width:#{lower-bound($medium-range)})";
+$medium-only: "#{$screen} and (min-width:#{lower-bound($medium-range)}) and (max-width:#{upper-bound($medium-range)})";
+
+$large-down: "#{$screen} and (max-width:#{upper-bound($medium-range)})";
+$large-up: "#{$screen} and (min-width:#{lower-bound($large-range)})";
+$large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-width:#{upper-bound($large-range)})";</code>
+</pre>
+                </div>
+                <p>Use these media queries with the variables specified above.</p>
+                <div class="code-wrap">
+<pre>
+<code class="language-scss">@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }</code>
+</pre>
+                </div>  
+            </div>
+
+            <div id="css" class="section">
+                <h2 class="subtitle">CSS</h2>
+                <p>Coming at a later stage</p>  
+            </div>  
+
+            <div id="js" class="section">
+                <h2 class="subtitle">Javascript</h2>
+                <p>There is no javascript! But feel free to enhance the functionality further with some awesome javascript code.</p>    
+            </div> 
+
+            <div id="browser" class="section">
+                <h2 class="subtitle">Browser support</h2>
+                <p>Works in all modern browsers. (IE10+, Chrome, Firefox, Safari).</p>
+                <p>Gracefully degrades in IE9. (Requires Modernizr).</p>
+                <p>Not yet tested on Windows Phone.</p> 
+            </div>
+        </div>
+    </div>   
+                </div>
+            </div>
+            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="src/js/vendor/prism.js"></script>
+        <script src="src/js/vendor/scrollIt.js"></script>
+        <script src="src/js/vendor/jquery.scrollTo.js"></script>
+        <script src="src/js/vendor/jquery.localScroll.js"></script>
+        <script src="src/js/vendor/smoothscroll.js"></script>
+        <script src="src/js/vendor/wow.js"></script>
+        <script src="src/js/vendor/stellar.js"></script>
+        <script src="src/js/app.js"></script>
+
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "50c49065-144f-4b6c-9e42-57d0ae4318af", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-53442203-1', 'auto');
+          ga('send', 'pageview');
+        </script>
+    </body>
+</html>
+
