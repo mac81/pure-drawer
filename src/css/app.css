@@ -368,7 +368,8 @@ select {
  *    Known issue: inner spacing remains in IE 6.
  */
 button,
-html input[type="button"], input[type="reset"],
+html input[type="button"],
+input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
@@ -1954,7 +1955,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
     opacity: 1; } }
 
-.lightSpeedIn {
+.lightSpeedIn, [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'], [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'], [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
   -webkit-animation-timing-function: ease-out;
@@ -1977,7 +1978,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0; } }
 
-.lightSpeedOut {
+.lightSpeedOut, [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='left'], [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='right'], [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='top'] {
   -webkit-animation-name: lightSpeedOut;
   animation-name: lightSpeedOut;
   -webkit-animation-timing-function: ease-in;
@@ -2952,8 +2953,7 @@ a {
   color: #d95843;
   text-decoration: none;
   line-height: inherit; }
-  a:hover,
-  a:focus {
+  a:hover, a:focus {
     color: #cb4029; }
   a img {
     border: none; }
@@ -2995,9 +2995,7 @@ ul {
     margin-top: 0;
     margin-left: 0;
     margin-bottom: 0; }
-  ul.square li ul,
-  ul.circle li ul,
-  ul.disc li ul {
+  ul.square li ul, ul.circle li ul, ul.disc li ul {
     list-style: inherit; }
   ul.square {
     list-style-type: square;
@@ -4125,7 +4123,7 @@ pre[data-line] {
   top: 0em;
   left: .6em;
   min-width: 1em;
-  padding: 0 0.5em;
+  padding: 0 .5em;
   background-color: #d95843;
   color: #fff;
   font: bold 65%/1.5 sans-serif;
@@ -4303,11 +4301,11 @@ body {
   .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon,
   .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon {
     background-color: transparent; }
-  .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:before,
-  .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:after,
+  .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:before, .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:after,
   .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:before,
   .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:after,
-  .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:before, .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:after {
+  .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:before,
+  .pure-toggle[data-toggle='top']:checked ~ .pure-toggle-label[data-toggle-label='top'] .pure-toggle-icon:after {
     top: 0; }
   .pure-toggle[data-toggle='left']:checked ~ .pure-toggle-label[data-toggle-label='left'] .pure-toggle-icon:before,
   .pure-toggle[data-toggle='right']:checked ~ .pure-toggle-label[data-toggle-label='right'] .pure-toggle-icon:before,
@@ -5153,6 +5151,20 @@ body {
   transition-duration: 1000ms;
   transition-delay: 500ms; }
 
+/*******************
+## Effect - FlipX ##
+*******************/
+/* DRAWER */
+[data-effect="pure-effect-lightspeed"] .pure-drawer {
+  z-index: 3;
+  -webkit-animation-duration: 1000ms; }
+
+[data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'],
+[data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'],
+[data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
+  visibility: visible; }
+
+/* OVERLAY */
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -6511,7 +6523,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
     opacity: 1; } }
 
-.lightSpeedIn {
+.lightSpeedIn, [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'], [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'], [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
   -webkit-animation-timing-function: ease-out;
@@ -6533,7 +6545,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0; } }
 
-.lightSpeedOut {
+.lightSpeedOut, [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='left'], [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='right'], [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='top'] {
   -webkit-animation-name: lightSpeedOut;
   animation-name: lightSpeedOut;
   -webkit-animation-timing-function: ease-in;

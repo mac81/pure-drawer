@@ -1,3 +1,4 @@
+'use strict';
 /**
  * Gulpfile.js - Concise builder
  *
@@ -5,25 +6,18 @@
  * Released under the MIT license.
  */
 
-
-'use strict';
-
-
 /**
  * Dependencies
  */
-
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var size = require('gulp-size');
-//var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
 
 /**
  * Constants
  */
-
 var AUTOPREFIXER_BROWSERS = [
   'chrome >= 30',
   'ie >= 8',
@@ -50,7 +44,6 @@ gulp.task('dist:css', function () {
     }))
     .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(gulp.dest('dist/css'))
-    //.pipe(size({ title: 'dist:css' }))
 });
 
 gulp.task('copy:scss', function() {
