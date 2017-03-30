@@ -2754,8 +2754,8 @@ Copyright (c) 2014 Daniel Eden
 
 @font-face {
   font-family: 'icomoon';
-  src: url("/src/fonts/icomoon.eot?-xb0za8");
-  src: url("/src/fonts/icomoon.eot?#iefix-xb0za8") format("embedded-opentype"), url("/src/fonts/icomoon.woff?-xb0za8") format("woff"), url("/src/fonts/icomoon.ttf?-xb0za8") format("truetype"), url("/src/fonts/icomoon.svg?-xb0za8#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?-xb0za8");
+  src: url("../fonts/icomoon.eot?#iefix-xb0za8") format("embedded-opentype"), url("../fonts/icomoon.woff?-xb0za8") format("woff"), url("../fonts/icomoon.ttf?-xb0za8") format("truetype"), url("../fonts/icomoon.svg?-xb0za8#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
