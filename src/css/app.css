@@ -9,7 +9,7 @@
 /**
  * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@import url(http://fonts.googleapis.com/css?family=Lato|Roboto+Slab:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato|Roboto+Slab:300,400,700);
 article,
 aside,
 details,
@@ -1955,7 +1955,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
     opacity: 1; } }
 
-.lightSpeedIn, [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'], [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'], [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
+.lightSpeedIn {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
   -webkit-animation-timing-function: ease-out;
@@ -1978,7 +1978,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0; } }
 
-.lightSpeedOut, [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='left'], [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='right'], [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='top'] {
+.lightSpeedOut {
   -webkit-animation-name: lightSpeedOut;
   animation-name: lightSpeedOut;
   -webkit-animation-timing-function: ease-in;
@@ -5151,20 +5151,6 @@ body {
   transition-duration: 1000ms;
   transition-delay: 500ms; }
 
-/*******************
-## Effect - FlipX ##
-*******************/
-/* DRAWER */
-[data-effect="pure-effect-lightspeed"] .pure-drawer {
-  z-index: 3;
-  -webkit-animation-duration: 1000ms; }
-
-[data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'],
-[data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'],
-[data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
-  visibility: visible; }
-
-/* OVERLAY */
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -6523,7 +6509,7 @@ Copyright (c) 2014 Daniel Eden
     transform: none;
     opacity: 1; } }
 
-.lightSpeedIn, [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='left']:checked ~ .pure-drawer[data-position='left'], [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='right']:checked ~ .pure-drawer[data-position='right'], [data-effect="pure-effect-lightspeed"] .pure-toggle[data-toggle='top']:checked ~ .pure-drawer[data-position='top'] {
+.lightSpeedIn {
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
   -webkit-animation-timing-function: ease-out;
@@ -6545,7 +6531,7 @@ Copyright (c) 2014 Daniel Eden
     transform: translate3d(100%, 0, 0) skewX(30deg);
     opacity: 0; } }
 
-.lightSpeedOut, [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='left'], [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='right'], [data-effect="pure-effect-lightspeed"] .pure-drawer[data-position='top'] {
+.lightSpeedOut {
   -webkit-animation-name: lightSpeedOut;
   animation-name: lightSpeedOut;
   -webkit-animation-timing-function: ease-in;
