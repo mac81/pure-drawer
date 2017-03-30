@@ -13,7 +13,7 @@
         <meta property="og:image" content="src/gfx/iphone-new.png"/>
         <meta property="og:site_name" content="Pure Drawer"/>
         <meta property="og:title" content="Pure CSS transition effects for off-canvas views"/>
-        
+
         <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
         <!-- Styles -->
         <link rel="stylesheet" href="src/css/app.css">
@@ -33,53 +33,53 @@
                 <div class="row collapse">
                     <div class="large-12 columns">
                         <ul class="nav-primary">
-                            <li><a href="/">Demo</a></li>
+                            <li><a href="/pure-drawer">Demo</a></li>
                             <li><a href="#setup">Setup</a></li>
                             <li><a href="#markup">Markup</a></li>
                             <li><a href="#scss">SCSS</a></li>
                             <li><a href="#css">CSS</a></li>
                             <li><a href="#js">Javascript</a></li>
                             <li><a href="#browser">Browser support</a></li>
-                        </ul> 
+                        </ul>
                     </div>
                 </div>
-            </nav>   
-            
+            </nav>
+
             <div class="pure-pusher-container">
                 <div class="pure-pusher">
                     <div class="row">
         <div class="large-12 columns documentation">
             <h1 class="title">Documentation</h1>
-            
+
             <div id="setup" class="section">
                 <h2 class="subtitle">Setup</h2>
                 <p>Head over to <a href="https://github.com/mac81/pure-drawer/tree/master/src">Github</a> and download the scss and/or css files.</p>
             </div>
-            
+
             <div id="markup" class="section">
                 <h2 class="subtitle">Markup</h2>
                 <p>It is important that the markup is in the same order as below due to the use of the css sibling selector. If you add additional containers to your markup you need to update the css accordingly.</p>
 
-                <h3>Single Drawer</h3>  
+                <h3>Single Drawer</h3>
                 <div class="code-wrap">
 <pre>
 <code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-slide"&gt;
     &lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
     &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;
         &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
-    &lt;/label&gt; 
+    &lt;/label&gt;
 
     &lt;div class="pure-drawer" data-position="left"&gt;
         Put your off canvas content here
-    &lt;/div&gt;  
+    &lt;/div&gt;
     &lt;div class="pure-pusher-container"&gt;
         &lt;div class="pure-pusher"&gt;
             Put your site content here
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
+    &lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt;
 &lt;/div&gt;</code>
-</pre>  
+</pre>
                 </div>
 
                 <h3>Multiple Drawers</h3>
@@ -90,18 +90,18 @@
     &lt;input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"&gt;
     &lt;input type="checkbox" id="pure-toggle-right" class="pure-toggle" data-toggle="right"&gt;
     &lt;input type="checkbox" id="pure-toggle-top" class="pure-toggle" data-toggle="top"&gt;
-    
+
     &lt;label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"&gt;
         &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
     &lt;/label&gt;
 
     &lt;label class="pure-toggle-label" for="pure-toggle-right" data-toggle-label="right"&gt;
         &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
-    &lt;/label&gt; 
+    &lt;/label&gt;
 
     &lt;label class="pure-toggle-label" for="pure-toggle-top" data-toggle-label="top"&gt;
         &lt;span class="pure-toggle-icon"&gt;&lt;/span&gt;
-    &lt;/label&gt; 
+    &lt;/label&gt;
 
     &lt;div class="pure-drawer" data-position="left"&gt;
         Put your off canvas content for the left drawer here
@@ -109,23 +109,23 @@
 
     &lt;div class="pure-drawer" data-position="right"&gt;
         Put your off canvas content for the right drawer here
-    &lt;/div&gt;  
+    &lt;/div&gt;
 
     &lt;div class="pure-drawer" data-position="top"&gt;
         Put your off canvas content for the top drawer here
-    &lt;/div&gt;  
+    &lt;/div&gt;
 
     &lt;div class="pure-pusher-container"&gt;
         &lt;div class="pure-pusher"&gt;
             Put your site content here
-        &lt;/div&gt; 
+        &lt;/div&gt;
     &lt;/div&gt;
 
-    &lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt; 
-    &lt;label class="pure-overlay" for="pure-toggle-right" data-overlay="right"&gt;&lt;/label&gt; 
+    &lt;label class="pure-overlay" for="pure-toggle-left" data-overlay="left"&gt;&lt;/label&gt;
+    &lt;label class="pure-overlay" for="pure-toggle-right" data-overlay="right"&gt;&lt;/label&gt;
     &lt;label class="pure-overlay" for="pure-toggle-top" data-overlay="top"&gt;&lt;/label&gt;
 &lt;/div&gt;</code>
-</pre>  
+</pre>
                 </div>
 
                 <h3 class="doc-title">Attributes</h3>
@@ -137,10 +137,10 @@
 <code class="language-markup">&lt;div class="pure-container" data-effect="pure-effect-slide"&gt;</code>
 </pre>
                     </div>
-                    <p><strong>data-effect:</strong> This is where you enter your desired effect.</p> 
+                    <p><strong>data-effect:</strong> This is where you enter your desired effect.</p>
                     <p>Choose between: slide, reveal, slideAlong, reverseSlide, scaleDown, scaleUp, scaleRotate, fall, push, bounce, fade, flipX, flipY and zoom.</p>
                 </div>
-                
+
                 <div class="sub-section">
                     <h4>Drawer</h4>
                     <div class="code-wrap">
@@ -176,7 +176,7 @@
                     <p><strong>data-overlay:</strong>Used to target the the overlay in css. Must match the value of data-position.</p>
                 </div>
             </div>
-        
+
 
             <div id="scss" class="section">
                 <h2 class="subtitle">SCSS</h2>
@@ -184,7 +184,7 @@
                 <div class="code-wrap">
 <pre>
 <code class="language-scss">// Point $show-drawer to one of the variables in _pure-drawer-breakpoints.scss to control which breakpoints drawers should appear.
-// $show-drawer: $small-only; 
+// $show-drawer: $small-only;
 
 /**************
 ## Animation ##
@@ -241,7 +241,7 @@
 *******************/
 
 // $overlay-bgcolor: rgba(0,0,0,0.4);</code>
-</pre>          
+</pre>
                 </div>
                 <h3 class="doc-title">Breakpoints</h3>
                 <p>Media queries can be easily customized by changing the variable values in _pure-drawer-breakpoints.scss.</p>
@@ -280,30 +280,30 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
 @media #{$large-up} { }
 @media #{$large-only} { }</code>
 </pre>
-                </div>  
+                </div>
             </div>
 
             <div id="css" class="section">
                 <h2 class="subtitle">CSS</h2>
-                <p>Coming at a later stage</p>  
-            </div>  
+                <p>Coming at a later stage</p>
+            </div>
 
             <div id="js" class="section">
                 <h2 class="subtitle">Javascript</h2>
-                <p>There is no javascript! But feel free to enhance the functionality further with some awesome javascript code.</p>    
-            </div> 
+                <p>There is no javascript! But feel free to enhance the functionality further with some awesome javascript code.</p>
+            </div>
 
             <div id="browser" class="section">
                 <h2 class="subtitle">Browser support</h2>
                 <p>Works in all modern browsers. (IE10+, Chrome, Firefox, Safari).</p>
                 <p>Gracefully degrades in IE9. (Requires Modernizr).</p>
-                <p>Not yet tested on Windows Phone.</p> 
+                <p>Not yet tested on Windows Phone.</p>
             </div>
         </div>
-    </div>   
+    </div>
                 </div>
             </div>
-            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label> 
+            <label class="pure-overlay" for="pure-toggle-left" data-overlay="left"></label>
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -330,4 +330,3 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
         </script>
     </body>
 </html>
-
